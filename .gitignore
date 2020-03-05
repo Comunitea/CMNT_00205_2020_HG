@@ -8,12 +8,25 @@ __pycache__/
 
 # Distribution / packaging
 .Python
+etc/
 build/
+/bin/
+/data/
+sandbox/
+odoo-repos/
+devel_*
+devel-*
+include/
+upgrade.py
+.idea
 develop-eggs/
 dist/
 downloads/
 eggs/
 .eggs/
+eggs-custom/
+.vscode/
+*.pyc
 lib/
 lib64/
 parts/
@@ -127,3 +140,4 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+Sera borrado project-addons/
