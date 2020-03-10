@@ -12,6 +12,7 @@
         'website_crm',
         'website_sale',
         'website_sale_wishlist',
+        'muk_website_scroll_up',
     ],
     'data': [
         'data/website_data.xml',
