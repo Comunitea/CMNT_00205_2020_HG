@@ -12,10 +12,10 @@ Handy Gym Theme
     :target: https://github.com/Comunitea/
     :alt: Comunitea
 .. |badge4| image:: https://img.shields.io/badge/github-Comunitea%2FGame%2FReady-lightgray.png?logo=github
-    :target: https://github.com/Comunitea/CMNT_00162_2018_GR
-    :alt: Comunitea / THEME_NAME
+    :target: https://github.com/Comunitea/CMNT_00205_2020_HG
+    :alt: Comunitea / HANDY GYM
 .. |badge5| image:: https://img.shields.io/badge/Spanish-Translated-F47D42.png
-    :target: https://github.com/Comunitea/CMNT_00162_2018_GR/tree/master/project-addons/theme_handygym/i18n
+    :target: https://github.com/Comunitea/CMNT_00205_2020_HG/tree/master/project-addons/theme_handygym/i18n
     :alt: Spanish Translated
 
 |badge1| |badge2| |badge3| |badge4| |badge5|
