@@ -1,8 +1,20 @@
 // Database selector
 .oe_website_login_container {
-    & .btn-default:hover, .btn-default:focus,
-    a:hover, a:focus, a:active {
-        font-size: 1em !important;
-        padding: 18px 40px;
+    & .field-db {
+        & input.form-control[readonly] {
+            border: 1px solid @btn-readonly-color;
+            color: @main-color;
+        }
+        & .btn-default:hover, .btn-default:focus,
+        a:hover, a:focus, a:active {
+            padding: 18px 40px;
+        }
+    }
+    & .oe_login_buttons {
+        a:hover, a:focus, a:active {
+            padding: 0;
+            font-size: 1.3em;
+            text-decoration: none;
+        }
     }
 }

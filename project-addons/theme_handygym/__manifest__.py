@@ -20,6 +20,7 @@
         'templates/contact.xml',
         'templates/footer.xml',
         'templates/header.xml',
+        'templates/login.xml',
         'templates/product.xml',
         'templates/shop.xml',
         'views/res_config.xml',
