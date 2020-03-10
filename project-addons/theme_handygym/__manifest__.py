@@ -11,6 +11,7 @@
         'website',
         'website_crm',
         'website_sale',
+        'website_sale_wishlist',
     ],
     'data': [
         'data/website_data.xml',
