@@ -30,3 +30,23 @@ header {
         }
     }
 }
+
+// Affix Header
+body {
+    #wrapwrap {
+        & main > div:first-child {
+                margin-top: 90px !important;
+        }
+        // With editor bar
+        & header {
+            position: fixed;
+            z-index: 1030;
+            width: 100%;
+            top: 35px;
+        }
+        // Without editor bar
+        & header:not(#oe_main_menu_navbar) {
+            top: 0 !important;
+        }
+    }
+}
