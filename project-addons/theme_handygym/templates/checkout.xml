@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <template id="website_sale_cart" inherit_id="website_sale.cart" name="Shopping Cart Handy Gym">
+        <!-- Hide right info column and extend full width cart table -->
+        <xpath expr="//div[hasclass('row')]//div" position="attributes">
+            <attribute name="class">col-12 oe_cart</attribute>
+        </xpath>
+        <xpath expr="//div[@id='right_column']" position="attributes">
+            <attribute name="style">display: none;</attribute>
+        </xpath>
+    </template>
+
+</odoo>

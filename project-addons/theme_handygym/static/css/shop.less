@@ -1,0 +1,29 @@
+// Product table list
+#products_grid > table {
+    background-color: @main-color;
+    border-collapse: unset;
+    border-spacing: 30px;
+    & tr:first-child {
+        display: none;
+    }
+    & td {
+        padding: 20px;
+    }
+    & a:not(.btn) {
+        color: @white-color;
+        text-decoration: none;
+        &:hover, &:focus, &:active {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: @white-color;
+            background-color: @main-color;
+            border: none;
+        }
+    }
+}
+
+// Product description
+.oe_product section {
+    background: @main-color !important;
+    border-top: 1px solid @main-color !important;
+}

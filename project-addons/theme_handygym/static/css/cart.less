@@ -1,0 +1,12 @@
+// Cart table
+table.js_cart_lines, table#cart_products {
+    border-spacing: 0;
+    & a:not(.btn) {
+        &:hover, &:focus, &:active {
+            border: 1px solid @white-color;
+        }
+    }
+    & a.js_delete_product:hover {
+        border: none;
+    }
+}

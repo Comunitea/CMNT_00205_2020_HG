@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <!-- Set Default Website to Handy Gym -->
+        <record id="website.default_website" model="website">
+            <field name="name">Handy Gym</field>
+            <field name="domain">handygym</field>
+            <field name="canonical_domain">http://handygym</field>
+            <field name="favicon" type="base64" file="theme_handygym/static/img/favicon_black.png"/>
+            <field name="logo" type="base64" file="theme_handygym/static/img/logo_handygym_white_300x100.png"/>
+            <field name="social_youtube">https://www.youtube.com</field>
+            <field name="social_facebook">https://www.facebook.com</field>
+            <field name="social_linkedin">https://www.linkedin.com</field>
+            <field name="social_instagram">https://www.instagram.com</field>
+            <field name="base_url">http://handygym</field>
+            <field name="auth_signup_uninvited">False</field>
+            <field name="email">info@handygym.es</field>
+            <field name="website_form_enable_metadata">True</field>
+        </record>
+
+        <!-- Menus -->
+        <record id="menu_tech_handy_gym" model="website.menu">
+            <field name="name">Tecnología Handy Gym</field>
+            <field name="url">/page/tecnologia-handy-gym</field>
+            <field name="parent_id" ref="website.main_menu"/>
+            <field name="sequence" type="int">30</field>
+            <field name="website_id" ref="website.default_website"/>
+        </record>
+    </data>
+</odoo>

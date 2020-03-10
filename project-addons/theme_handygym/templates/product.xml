@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <template id="website_sale_product" inherit_id="website_sale.product" name="Product Handy Gym">
+        <!-- Delete breadcrumbs -->
+        <xpath expr="//div[@class='col-sm-4']" position="replace"/>
+
+        <!-- Delete search box -->
+        <xpath expr="//div[@class='col-sm-3 mb8']" position="replace"/>
+
+        <!-- Delete guarantee text -->
+        <xpath expr="//div[@id='product_details']//hr[last()]" position="replace"/>
+        <xpath expr="//div[@id='product_details']/p[last()]" position="replace"/>
+    </template>
+
+</odoo>

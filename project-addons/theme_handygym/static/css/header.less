@@ -1,0 +1,32 @@
+header {
+    // Logo
+    & a.navbar-brand img {
+        max-height: 40px;
+        margin-top: 4px;
+    }
+    // Menus
+    & .nav {
+        & li {
+            & a {
+                padding-left:10px;
+                padding-right: 10px;
+            }
+        }
+    }
+    .navbar-default{
+        background-color: @main-color;
+        border-color: @secondary-color;
+        & .navbar-nav > li.active{
+            font-weight: bold;
+        }
+        & .navbar-nav > li > a {
+            color: @secondary-color;
+            &:hover, &:focus, &:active {
+                font-size: 1.5em;
+                font-weight: bold;
+                color: @btn-color;
+                background-color: @main-color !important;
+            }
+        }
+    }
+}

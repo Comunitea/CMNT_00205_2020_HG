@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <template id="website_layout_footer_copyright" inherit_id="website.layout_footer_copyright" name="Footer Copyright Handy Gym">
+        <!-- Set more margin bottom -->
+        <xpath expr="//div[@class='container mt16 mb8']" position="attributes">
+            <attribute name="class">container mt16 mb16</attribute>
+        </xpath>
+    </template>
+
+    <template id="website_layout" inherit_id="website.layout" name="Main layout Handy Gym">
+        <!-- Add scripts on footer by lazy load -->
+        <xpath expr="//footer" position="after">
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.min.js" type="text/javascript"/>
+            <script src="/theme_handygym/static/js/script.js" type="text/javascript"/>
+        </xpath>
+    </template>
+
+    <template id="website_footer_default" inherit_id="website.footer_default" name="Automatic Footer Handy Gym">
+        <!-- Custom Footer on three columns part -->
+        <xpath expr="//div[@id='footer']/div[@class='row']" position="replace">
+            <div class="row">
+                <div class="col-md-5" id="info">
+                    <h4><strong>Contactar con nosotros</strong></h4>
+                    <ul class="list-unstyled">
+                        <li t-ignore="true" class="hidden-xs"><i class="fa fa-phone"/> <span t-field="res_company.phone"/></li>
+                        <li t-ignore="true" class="visible-xs-block"><a t-att-href="'tel:%s' %res_company.phone" rel="nofollow, noindex"><i class="fa fa-phone" /> <span t-field="res_company.phone"/></a></li>
+<!--                        <li t-ignore="true" class="hidden-xs"><i class="fa fa-envelope"/>  <span t-field="res_company.email"/></li>-->
+                        <li t-ignore="true"><a t-att-href="'mailto:%s' % res_company.email" target="_blank" rel="nofollow, noindex"><i class="fa fa-envelope"/> <span t-field="res_company.email"/></a></li>
+                        <li t-ignore="true" class="hidden-xs"><a href="/page/contactus" target="_blank">Use our Contact Form</a></li>
+                        <li t-ignore="true">
+                            <i class="fa fa-map-marker"/>
+                            <span t-field="res_company.street"/>,
+                            <span t-field="res_company.city"/>,
+                            <span t-field="res_company.zip"/>,
+                            <span t-field="res_company.country_id"/>
+                        </li>
+                    </ul>
+                    <h4 t-if="website.social_facebook or website.social_twitter or website.social_linkedin or website.social_youtube or website.social_googleplus or website.social_github">
+                        <a t-att-href="website.social_facebook" t-if="website.social_facebook" t-ignore="True" rel="nofollow, noindex"><i class="fa fa-facebook-square"/></a>
+                        <a t-att-href="website.social_twitter" t-if="website.social_twitter" t-ignore="True" rel="nofollow, noindex"><i class="fa fa-twitter"/></a>
+                        <a t-att-href="website.social_linkedin" t-if="website.social_linkedin" t-ignore="True" rel="nofollow, noindex"><i class="fa fa-linkedin"/></a>
+                        <a t-att-href="website.social_youtube" t-if="website.social_youtube" t-ignore="True" rel="nofollow, noindex"><i class="fa fa-youtube-play"/></a>
+                        <a t-att-href="website.social_github" t-if="website.social_github" t-ignore="True" rel="nofollow, noindex"><i class="fa fa-github"/></a>
+                    </h4>
+                </div>
+                <div class="col-md-4">
+                    <h4><strong>Handy Gym</strong></h4>
+                    <ul class="list-unstyled" id="products">
+                        <li><a href="/page/tecnologia-handy-gym">Tecnología Handy Gym</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h4><strong>Mi cuenta</strong></h4>
+                    <ul class="list-unstyled" id="products">
+                        <li><a href="/shop/cart">Mi carrito</a></li>
+                        <li><a href="/my/quotes">Mis presupuestos</a></li>
+                        <li><a href="/my/orders">Mis pedidos</a></li>
+                        <li><a href="/my/invoices">Mis facturas</a></li>
+                        <li><a href="/my/account">Datos personales</a></li>
+                    </ul>
+                </div>
+            </div>
+        </xpath>
+    </template>
+
+</odoo>

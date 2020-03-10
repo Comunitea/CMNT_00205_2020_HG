@@ -1,0 +1,34 @@
+footer {
+    background-color: @main-color;
+    // links
+    & a {
+        color: @secondary-color;
+        &:hover, &:focus, &:active {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: @secondary-color;
+            text-decoration: none;
+        }
+    }
+    // Block content
+    & #footer {
+        border-top: 1px solid @secondary-color;
+        border-bottom: 1px solid @secondary-color;
+        padding-bottom: 15px;
+    }
+    // Contact
+    & ul.list-unstyled {
+        & li {
+            margin-bottom: 3px;
+        }
+        & .fa-phone {
+            padding: 0 2px 0 1px;
+        }
+        & .fa-envelope {
+            padding: 0;
+        }
+        & .fa-map-marker {
+            padding: 0 2px 0 3px;
+        }
+    }
+}

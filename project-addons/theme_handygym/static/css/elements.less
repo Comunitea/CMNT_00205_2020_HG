@@ -1,0 +1,88 @@
+/* Buttons */
+.btn-primary, btn-default, .badge, .label-primary {
+    border: 1px solid @btn-bg-color;
+    color: @btn-color;
+    background-color: @btn-bg-color;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active,
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active {
+	border: 1px solid @btn-color;
+    color: @btn-color;
+    background-color: @main-color;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.btn-group > .btn + .dropdown-toggle {
+    padding-right: 12px;
+    &:hover, &:focus, &:active, &:visited {
+        font-size: 1em;
+        padding-left: 12px;
+        border-color: @btn-color;
+    }
+}
+
+.btn-xs {
+    &:hover, &:focus, &:active {
+        font-size: 1.2em !important;
+    }
+}
+
+a {
+    color: @btn-color;
+    text-decoration: none;
+    &:hover, &:focus, &:active {
+        font-size: 1.5em;
+        font-weight: bold;
+        color: @btn-color;
+        text-decoration: none;
+    }
+}
+
+// Dropdown
+.dropdown-menu {
+    background-color: @btn-bg-color;
+    border-color: @btn-bg-color;
+        li {
+            a {
+                color: @btn-color;
+                &:hover, &:focus, &:active {
+                    font-size: 1.5em;
+                    font-weight: bold;
+                    color: @btn-color;
+                    background-color: @btn-bg-color;
+                }
+            }
+        }
+}
+
+// Panels
+.panel {
+    background-color: @main-color;
+}
+
+.panel-info {
+    border-color: @btn-color;
+    & .panel-heading {
+        color: @btn-color;
+        background-color: @main-color;
+        border-color: @btn-color;
+    }
+}
+
+// web editor
+.o_switch > input + span {
+    background-color: @main-color !important;
+}
+.o_switch > input + span:after {
+    background-color: red !important;
+}
+.o_switch > input:checked + span {
+    background-color: @main-color !important;
+}
+.o_switch > input:checked + span:after {
+    background-color: green !important;
+}
+
+

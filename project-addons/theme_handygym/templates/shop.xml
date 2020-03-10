@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <template id="website_sale_products" inherit_id="website_sale.products" name="Products Handy Gym">
+        <!-- Hide pager -->
+        <xpath expr="//div[hasclass('products_pager')][1]" position="attributes">
+            <attribute name="style">display: none;</attribute>
+        </xpath>
+        <xpath expr="//div[hasclass('products_pager')][2]" position="attributes">
+            <attribute name="style">display: none;</attribute>
+        </xpath>
+    </template>
+
+</odoo>
