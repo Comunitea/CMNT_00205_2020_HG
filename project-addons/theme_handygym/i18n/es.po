@@ -1,0 +1,94 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* theme_handygym
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-11 10:20+0000\n"
+"PO-Revision-Date: 2020-03-11 10:20+0000\n"
+"Last-Translator: Rubén Seijas <ruben@comunitea.com>\n"
+"Language-Team: ES_es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: theme_handygym
+#: model:ir.ui.view,arch_db:theme_handygym.website_footer_default
+msgid "<strong>Contactar con nosotros</strong>"
+msgstr "<strong>Contactar con nosotros</strong>"
+
+#. module: theme_handygym
+#: model:ir.ui.view,arch_db:theme_handygym.website_footer_default
+msgid "<strong>Handy Gym</strong>"
+msgstr "<strong>Handy Gym</strong>"
+
+#. module: theme_handygym
+#: model:ir.ui.view,arch_db:theme_handygym.website_footer_default
+msgid "<strong>Mi cuenta</strong>"
+msgstr "<strong>Mi cuenta</strong>"
+
+#. module: theme_handygym
+#: model:ir.ui.view,arch_db:theme_handygym.website_footer_default
+msgid "Datos personales"
+msgstr "Datos personales"
+
+#. module: theme_handygym
+#: model:ir.model.fields,field_description:theme_handygym.field_website_config_settings_social_instagram
+#: model:ir.model.fields,field_description:theme_handygym.field_website_social_instagram
+msgid "Instagram Account"
+msgstr "Cuenta de Instagram"
+
+#. module: theme_handygym
+#: model:ir.ui.view,arch_db:theme_handygym.website_footer_default
+msgid "Mi carrito"
+msgstr "Mi carrito"
+
+#. module: theme_handygym
+#: model:ir.ui.view,arch_db:theme_handygym.website_footer_default
+msgid "Mis facturas"
+msgstr "Mis facturas"
+
+#. module: theme_handygym
+#: model:ir.ui.view,arch_db:theme_handygym.website_footer_default
+msgid "Mis pedidos"
+msgstr "Mis pedidos"
+
+#. module: theme_handygym
+#: model:ir.ui.view,arch_db:theme_handygym.website_footer_default
+msgid "Mis presupuestos"
+msgstr "Mis presupuestos"
+
+#. module: theme_handygym
+#: model:ir.ui.view,arch_db:theme_handygym.website_footer_default
+#: model:website.menu,name:theme_handygym.menu_tech_handy_gym
+msgid "Tecnología Handy Gym"
+msgstr "Tecnología Handy Gym"
+
+#. module: theme_handygym
+#: model:ir.ui.view,arch_db:theme_handygym.website_footer_default
+msgid "Use our Contact Form"
+msgstr "Mediante el Formulario de Contacto"
+
+#. module: theme_handygym
+#: model:ir.model,name:theme_handygym.model_website
+msgid "Website"
+msgstr "Sitio web"
+
+#. module: theme_handygym
+#: model:ir.model.fields,field_description:theme_handygym.field_website_config_settings_domain
+msgid "Website Domain"
+msgstr "Dominio de la página web"
+
+#. module: theme_handygym
+#: model:ir.ui.view,arch_db:theme_handygym.website_settings_add_instagam
+msgid "https://www.instagram.com/company_odoo"
+msgstr "https://www.instagram.com/company_odoo"
+
+#. module: theme_handygym
+#: model:ir.model,name:theme_handygym.model_website_config_settings
+msgid "website.config.settings"
+msgstr "website.config.settings"
+
