@@ -2,6 +2,30 @@
 <odoo>
 
     <template id="website_sale_product" inherit_id="website_sale.product" name="Product Handy Gym">
+        <!-- Add Short Description -->
+         <xpath expr="//form" position="after">
+            <div t-if="product.description_short">
+                <hr />
+                <p t-field="product.description_short" class="text-muted" />
+                <hr t-if="not product.description_sale"/>
+            </div>
+        </xpath>
+        <!-- Hide guarantee text -->
+        <xpath expr="//div[@id='product_details']//hr[last()]" position="attributes">
+            <attribute name="t-if">True == False</attribute>
+        </xpath>
+        <xpath expr="//div[@id='product_details']/p[last()]" position="attributes">
+            <attribute name="t-if">True == False</attribute>
+        </xpath>
+        <!-- Add HTML Description -->
+        <xpath expr="//div[@id='product_full_description']" position="replace">
+            <div class="container mt32">
+                    <h3 t-if="product.description">Especifications</h3>
+                <div class="row mt16">
+                    <div itemprop="description" t-field="product.description" class="oe_structure" id="product_full_description" />
+                </div>
+            </div>
+        </xpath>
         <!-- Delete breadcrumbs -->
         <xpath expr="//div[@class='col-sm-4']" position="attributes">
             <attribute name="t-if">True == False</attribute>
