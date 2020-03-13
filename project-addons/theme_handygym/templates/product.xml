@@ -3,14 +3,14 @@
 
     <template id="website_sale_product" inherit_id="website_sale.product" name="Product Handy Gym">
         <!-- Delete breadcrumbs -->
-        <xpath expr="//div[@class='col-sm-4']" position="replace"/>
+        <xpath expr="//div[@class='col-sm-4']" position="attributes">
+            <attribute name="t-if">True == False</attribute>
+        </xpath>
 
         <!-- Delete search box -->
-        <xpath expr="//div[@class='col-sm-3 mb8']" position="replace"/>
-
-        <!-- Delete guarantee text -->
-        <xpath expr="//div[@id='product_details']//hr[last()]" position="replace"/>
-        <xpath expr="//div[@id='product_details']/p[last()]" position="replace"/>
+        <xpath expr="//div[@class='col-sm-3 mb8']" position="attributes">
+            <attribute name="t-if">True == False</attribute>
+        </xpath>
     </template>
 
 </odoo>
