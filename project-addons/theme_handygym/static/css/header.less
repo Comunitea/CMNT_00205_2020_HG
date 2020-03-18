@@ -34,9 +34,13 @@ header {
 // Affix Header
 body {
     #wrapwrap.o_affix_wrap {
-        // All pages
+        // General. All pages without wrap
         & main > div:first-child {
             margin-top: 70px !important;
+        }
+        // All pages with wrap
+        & main > div#wrap:first-child {
+            margin-top: 50px !important;
         }
         // Just login page
         & main > div.oe_website_login_container {
