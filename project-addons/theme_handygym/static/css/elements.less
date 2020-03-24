@@ -1,12 +1,14 @@
 /* Buttons */
-.btn-primary, btn-default, .badge, .label-primary {
+.btn-primary, btn-default, .badge, .label-primary, input.form-control[readonly] {
     border: 1px solid @btn-bg-color;
     color: @btn-color;
     background-color: @btn-bg-color;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary.active, .btn-primary:active,
-.btn-default:hover, .btn-default:focus, .btn-default.active, .btn-default:active, {
+.btn-primary:active:hover, .btn-primary:active:focus,
+.btn-default:hover, .btn-default:focus, .btn-default.active, .btn-default:active,
+.btn-default:active:hover, .btn-default:active:focus,{
 	border: 1px solid @btn-color;
     color: @btn-color;
     background-color: @main-color;
@@ -16,10 +18,11 @@
 
 .btn-group > .btn + .dropdown-toggle {
     padding-right: 12px;
-    &:hover, &:focus, &:active, &:visited {
+    &:hover, &:focus, &:active, &:visited,
+    &:active:hover, &:active:focus {
         font-size: 1em;
         padding-left: 12px;
-        border-color: @btn-color;
+        border: 1px solid @btn-color;
     }
 }
 
@@ -32,7 +35,8 @@
 a {
     color: @btn-color;
     text-decoration: none;
-    &:hover, &:focus, &:active {
+    &:hover, &:focus, &:active,
+    &:active:hover, &:active:focus{
         font-size: 1.5em;
         font-weight: bold;
         color: @btn-color;
@@ -40,6 +44,15 @@ a {
     }
 }
 
+a.btn.btn-remove, .btn.btn-default.a-submit {
+    &:hover, &:focus, &:active, &:visited {
+        padding: 30px 38px 4px 38px;
+        color: var(--text-color, @btn-color);
+        border: 1px solid @btn-color;
+    }
+}
+
+// Body text colors
 body .text-primary {
     color: @btn-color;
     font-weight: bold;
@@ -52,7 +65,8 @@ body .text-primary {
         li {
             a {
                 color: @btn-color;
-                &:hover, &:focus, &:active {
+                &:hover, &:focus, &:active,
+                &:active:hover, &:active:focus {
                     font-size: 1.5em;
                     font-weight: bold;
                     color: @btn-color;
