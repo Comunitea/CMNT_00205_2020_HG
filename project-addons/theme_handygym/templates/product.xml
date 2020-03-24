@@ -21,7 +21,7 @@
         <xpath expr="//div[@id='product_full_description']" position="replace">
             <div class="container mt32">
                     <h3 t-if="product.description">Especifications</h3>
-                <div class="row mt16">
+                <div class="mt16">
                     <div itemprop="description" t-field="product.description" class="oe_structure" id="product_full_description" />
                 </div>
             </div>
