@@ -1,0 +1,60 @@
+#redsys_order {
+    .panel-default {
+        // All panel
+        background-color: unset;
+        border-color: @color-light-gray;
+        margin-bottom: 48px;
+        & .panel-heading {
+            border-color: @color-light-gray;
+            // Order
+            & h4 > a {
+                color: @btn-bg-color;
+                &:hover, &:focus, &:active {
+                    font-size: 26px;
+                    font-weight: @font-weight-bold;
+                    text-decoration: none;
+                }
+            }
+            & div.text-right {
+                display: flex;
+                align-items: center;
+                margin-top: 4px;
+                & a {
+                    color: @btn-color;
+                    background-color: @btn-bg-color;
+                    border: 1px solid @btn-color;
+                    border-radius: 4px;
+                    font-weight: @font-weight-bold;
+                    padding: 8px;
+                    text-decoration: none;
+                    &:hover, &:focus, &:active {
+                        border: 1px solid @btn-color;
+                        background-color: @btn-bg-hover-color;
+                        font-size: @font-size-medium;
+                    }
+                }
+            }
+        }
+        & .panel-body {
+            & address {
+                // Company name
+                & [itemprop="name"] {
+                    line-height: inherit;
+                    color: inherit;
+                    font-size: inherit;
+                }
+            }
+            // Separator
+            & hr {
+                border-top: 1px solid @color-light-gray;
+            }
+            // Order Lines
+            & div.row {
+                display: flex;
+                align-items: center;
+                padding-top: 8px;
+                padding-bottom: 8px;
+            }
+        }
+    }
+}

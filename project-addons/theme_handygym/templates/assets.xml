@@ -17,6 +17,7 @@
             <link href="/theme_handygym/static/css/login.less" rel="stylesheet" type="text/less"/>
             <link href="/theme_handygym/static/css/portal.less" rel="stylesheet" type="text/less"/>
             <link href="/theme_handygym/static/css/product.less" rel="stylesheet" type="text/less"/>
+            <link href="/theme_handygym/static/css/redsys.less" rel="stylesheet" type="text/less"/>
             <link href="/theme_handygym/static/css/shop.less" rel="stylesheet" type="text/less"/>
         </xpath>
     </template>
