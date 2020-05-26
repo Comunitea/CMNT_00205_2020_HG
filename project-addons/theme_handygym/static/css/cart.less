@@ -2,19 +2,37 @@
 table.table-striped.js_cart_lines {
     background-color: unset;
     border-spacing: 0;
-    & a:not(.btn) {
-        border: 1px solid #424242;
-        &:hover, &:focus, &:active {
-            border: 1px solid @color-white;
-        }
-    }
-    & a.js_delete_product:hover {
-        border: none;
-    }
+    // Lines
     & tr {
         background-color: unset;
+        & th {
+            // background-color: @btn-bg-hover-color;
+            border-bottom: 1px solid @btn-color;
+        }
         & td {
+            border-top: 1px solid @btn-color;
             padding: 8px;
+            // Product link
+            & a:not(.btn) {
+                text-decoration: none;
+                &:hover, &:focus, &:active {
+                    font-size: @font-size-medium;
+                }
+            }
+            // Remove
+            & a.js_delete_product:hover {
+                border: none;
+            }
+            // Qty
+            & a.input-group-addon {
+                color: @btn-color !important;
+                background-color: @btn-bg-hover-color;
+                    border: 1px solid @btn-bg-hover-color !important;
+                &:hover, &:focus, &:active {
+                    font-size: @font-size-base;
+                    border: 1px solid @btn-color !important;
+                }
+            }
         }
     }
 }

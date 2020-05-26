@@ -2,6 +2,14 @@
     // Address panels
     & .border_primary {
         border: 1px solid @color-white;
+        & address {
+            // Company name
+            & [itemprop="name"] {
+                line-height: inherit;
+                color: inherit;
+                font-size: inherit;
+            }
+        }
     }
 
     // Edit address panels
