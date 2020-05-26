@@ -1,0 +1,38 @@
+// web editor
+#oe_main_menu_navbar {
+    // Dropdown
+    & .dropdown-menu {
+        border-color: @color-light-gray;
+        background-image: @bg-image-body;
+        background-position: @bg-image-position;
+        background-repeat: @bg-image-bg-repeat;
+        background-size: @bg-image-bg-size;
+        li {
+            a {
+                color: @btn-color;
+                &:hover, &:focus, &:active {
+                    font-size: @font-size-medium;
+                    font-weight: @font-weight-bold;
+                    color: @btn-bg-color !important;
+                    background-image: @bg-image-body;
+                    background-position: @bg-image-position;
+                    background-repeat: @bg-image-bg-repeat;
+                    background-size: @bg-image-bg-size;
+                }
+            }
+        }
+    }
+    // Switches
+    .o_switch > input + span {
+        background-color: @color-main !important;
+    }
+    .o_switch > input + span:after {
+        background-color: red !important;
+    }
+    .o_switch > input:checked + span {
+        background-color: @color-main !important;
+    }
+    .o_switch > input:checked + span:after {
+        background-color: green !important;
+    }
+}

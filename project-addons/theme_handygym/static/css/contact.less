@@ -1,11 +1,51 @@
 // Phone validation
 .s_website_form {
-    & #email_from-error, #phone-error {
+    margin-bottom: 48px;
+    & .has-error .control-label {
+        // Fields color errors
         color: @state-danger-text;
+        border-color: @state-danger-text;
+        // Legal links color errors
+        & a:not(.a-submit) {
+            color: @btn-color;
+            &:not(.a-submit):hover, &:not(.a-submit):focus, &:not(.a-submit):active {
+                color: @btn-color;
+            }
+        }
     }
-    & .checkbox label {
+    // Legal links colors
+    & a:not(.a-submit) {
+        color: @btn-bg-color;
+        text-decoration: none;
+        &:not(.a-submit):hover, &:not(.a-submit):focus, &:not(.a-submit):active {
+            font-size: @font-size-base;
+            font-weight: @font-weight-bold;
+            color: @btn-bg-color;
+            text-decoration: none;
+        }
+    }
+    // Legal checkbox
+    .checkbox label {
         padding-top: 0;
         padding-left: 5px;
         text-align: left;
     }
 }
+
+// Address
+    address {
+        // Company name
+        & [itemprop="name"] {
+            line-height: 1.6;
+            color: @btn-bg-color;
+            font-size: @font-size-h3;
+            font-weight: @font-weight-bold;
+        }
+        // Maps link
+        & a:not(.a-submit) {
+            color: @btn-bg-color;
+            &:not(.a-submit):hover, &:not(.a-submit):focus, &:not(.a-submit):active {
+                color: @btn-bg-color;
+            }
+        }
+    }

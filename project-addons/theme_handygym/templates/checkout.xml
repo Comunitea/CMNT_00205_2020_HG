@@ -11,4 +11,10 @@
         </xpath>
     </template>
 
+    <template id="website_sale_cart_popover" inherit_id="website_sale.cart_popover" name="Cart Popover Handy Gym">
+        <xpath expr="//div[hasclass('text-center')]//a" position="attributes">
+            <attribute name="class" separator=" " add="btn-xs"/>
+        </xpath>
+    </template>
+
 </odoo>

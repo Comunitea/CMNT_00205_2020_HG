@@ -5,9 +5,12 @@
     <template id="website_assets_frontend" inherit_id="website.assets_frontend" name="Website Frontend Assets Handy Gym">
         <xpath expr="link[last()]" position="after">
             <link href="/theme_handygym/static/css/_general.less" rel="stylesheet" type="text/less"/>
+            <link href="/theme_handygym/static/css/body.less" rel="stylesheet" type="text/less"/>
             <link href="/theme_handygym/static/css/cart.less" rel="stylesheet" type="text/less"/>
             <link href="/theme_handygym/static/css/checkout.less" rel="stylesheet" type="text/less"/>
             <link href="/theme_handygym/static/css/contact.less" rel="stylesheet" type="text/less"/>
+            <link href="/theme_handygym/static/css/cookies.less" rel="stylesheet" type="text/less"/>
+            <link href="/theme_handygym/static/css/editor.less" rel="stylesheet" type="text/less"/>
             <link href="/theme_handygym/static/css/elements.less" rel="stylesheet" type="text/less"/>
             <link href="/theme_handygym/static/css/footer.less" rel="stylesheet" type="text/less"/>
             <link href="/theme_handygym/static/css/header.less" rel="stylesheet" type="text/less"/>

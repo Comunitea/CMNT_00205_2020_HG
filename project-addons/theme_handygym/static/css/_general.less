@@ -1,16 +1,83 @@
-/* Main colors */
-@main-color: #060606;
-@secondary-color: #888888;
-@white-color: #fff;
-@btn-color: #fff;
-@btn-bg-color: #424242;
-@btn-readonly-color: #adafae;
+/********** Start Fonts ***********/
+// @import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,700&subset=latin-ext');
+// @main-font-family: 'Roboto', sans-serif;
 
-// Saving Theme Bootswatch dependencies
-@state-danger-text: #b94a48;
+// Weight
+@font-weight-bold: bold;
 
-/* Spinner */
+// Size applies by bootstrap are commented
+// @font-size-base:          14px;
+// @font-size-small:         ceil((@font-size-base * 0.85)); // ~12px
+@font-size-medium:           floor((@font-size-base * 1.15)); // ~16px
+// @font-size-large:         ceil((@font-size-base * 1.25)); // ~18px
+@font-size-x-large:          floor((@font-size-base * 1.45)); // ~20px
+@font-size-xx-large:         floor((@font-size-base * 1.6)); // ~22px
+// @font-size-h1:            floor((@font-size-base * 2.6)); // ~36px
+// @font-size-h2:            floor((@font-size-base * 2.15)); // ~30px
+// @font-size-h3:            ceil((@font-size-base * 1.7)); // ~24px
+// @font-size-h4:            ceil((@font-size-base * 1.25)); // ~18px
+// @font-size-h5:            @font-size-base; //14px
+// @font-size-h6:            ceil((@font-size-base * 0.85)); // ~12px
+/********** End Fonts ***********/
+
+/********** Start Main colors ***********/
+@color-white: #fff;
+@color-danger: #E53434;
+@color-gray: #5e5e5e;
+@color-gray-opacity: rgba(94, 94, 94, 0.5);
+@color-light-gray: #7A7A7A;
+@color-danger-text: #b94a48;
+@color-transparent: transparent;
+@color-readonly: #adafae;
+@color-disabled: @color-white;
+// Main
+@color-main: @color-white;
+@color-secondary: @color-gray;
+/********** End Main colors ***********/
+
+/********** Start Sections ***********/
+// Header
+@color-bg-header: @color-gray-opacity;
+@color-border-header: @color-light-gray;
+@color-hover-header: @color-danger;
+@color-text-header: @color-white;
+
+@padding-header: 8px 0px;
+@border-header: 2px solid @color-border-header;
+
+// Body
+@bg-image-body: url("/theme_handygym/static/img/noise_web.jpg");
+@bg-image-position: center center;
+@bg-image-bg-repeat: repeat;
+@bg-image-bg-size: auto;
+
+// Footer
+@color-bg-footer: @color-gray-opacity;
+@color-border-footer: @color-light-gray;
+@color-link-footer: @color-white;
+@color-hover-link-footer: @color-danger;
+
+@border-footer: 2px solid @color-border-footer;
+@padding-bottom-footer: 15px;
+
+/********** End Sections ***********/
+
+/********** Start Buttons ***********/
+@btn-color: @color-white;
+@btn-hover-color: @color-white;
+@btn-bg-color: @color-danger;
+@btn-bg-hover-color: @color-gray;
+@btn-readonly-color: @color-readonly;
+/********** End Buttons ***********/
+
+/********** Start Dependencies ***********/
+// Theme Bootswatch
+@state-danger-text: @color-danger-text;
+
+// Global variables
 :root {
+    // Spinner
     --color-bg: rgba(255,255,255,0.1);
     --url-bg: url('/theme_handygym/static/img/load-spinner.gif');
 }
+/********** End Dependencies ***********/

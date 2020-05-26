@@ -1,6 +1,6 @@
 // Product table list
 #products_grid > table {
-    background-color: @main-color;
+    background-color: unset;
     border-collapse: unset;
     border-spacing: 30px;
     & tr:first-child {
@@ -9,21 +9,32 @@
     & td {
         padding: 20px;
     }
-    & a:not(.btn) {
-        color: @white-color;
-        text-decoration: none;
-        &:hover, &:focus, &:active {
-            font-size: 1.2em;
-            font-weight: bold;
-            color: @white-color;
-            background-color: @main-color;
-            border: none;
+    // Product description
+    .oe_product section {
+        background: unset !important;
+        bottom: -16px !important;
+        border-top: 1px solid @color-transparent !important;
+        // Product name link
+        & a:not(.btn) {
+            color: @color-white;
+            text-decoration: none;
+            &:hover, &:focus, &:active {
+                font-size: @font-size-xx-large;
+                font-weight: @font-weight-bold;
+                color: @btn-bg-color;
+                border: none;
+            }
+        }
+        // Miniature links: Add to cart - Add to wishlist
+        & a.btn-default, a.btn-xs, button.btn-default, button.btn-xs  {
+            border: 1px solid @btn-color;
+            background-color: @color-transparent;
+            &:hover, &:focus, &:active {
+                font-size: @font-size-small !important;
+                font-weight: @font-weight-bold;
+                color: @btn-bg-color;
+                border: 1px solid @btn-bg-color;
+            }
         }
     }
-}
-
-// Product description
-.oe_product section {
-    background: @main-color !important;
-    border-top: 1px solid @main-color !important;
 }

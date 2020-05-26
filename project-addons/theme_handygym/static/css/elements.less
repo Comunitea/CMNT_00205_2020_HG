@@ -1,5 +1,5 @@
 /* Buttons */
-.btn-primary, btn-default, .badge, .label-primary, input.form-control[readonly] {
+.btn-primary, .btn-default, .badge {
     border: 1px solid @btn-bg-color;
     color: @btn-color;
     background-color: @btn-bg-color;
@@ -8,12 +8,11 @@
 .btn-primary:hover, .btn-primary:focus, .btn-primary.active, .btn-primary:active,
 .btn-primary:active:hover, .btn-primary:active:focus,
 .btn-default:hover, .btn-default:focus, .btn-default.active, .btn-default:active,
-.btn-default:active:hover, .btn-default:active:focus,{
+.btn-default:active:hover, .btn-default:active:focus {
 	border: 1px solid @btn-color;
-    color: @btn-color;
-    background-color: @main-color;
-    font-size: 1.2em;
-    font-weight: bold;
+    background-color: @btn-bg-hover-color;
+    font-size: @font-size-medium;
+    font-weight: @font-weight-bold;
 }
 
 .btn-group > .btn + .dropdown-toggle {
@@ -32,75 +31,71 @@
     }
 }
 
-a {
+a:not(.a-submit) .navbar-default {
+    background-color: @color-gray-opacity;
     color: @btn-color;
     text-decoration: none;
-    &:hover, &:focus, &:active,
-    &:active:hover, &:active:focus{
-        font-size: 1.2em;
-        font-weight: bold;
+    &:not(.a-submit):hover, &:not(.a-submit):focus, &:not(.a-submit):active {
+        font-size: @font-size-medium;
+        font-weight: @font-weight-bold;
         color: @btn-color;
         text-decoration: none;
     }
 }
 
-.input-group-btn:last-child > .btn.btn-remove, .input-group-btn > .btn.btn-default.a-submit {
-    &:hover, &:focus, &:active, &:visited {
-        padding: 30px 38px 4px 38px !important;
-        color: var(--text-color, @btn-color);
+/* Inputs groups */
+// Input filed
+.input-group {
+    & input {
         border: 1px solid @btn-color;
     }
+    & input.form-control[readonly] {
+        border: 1px solid @color-readonly;
+    }
 }
-
-// Body text colors
-body .text-primary {
-    color: @btn-color;
-    font-weight: bold;
-}
-
-// Dropdown
-.dropdown-menu {
-    background-color: @btn-bg-color;
-    border-color: @btn-bg-color;
-        li {
-            a {
-                color: @btn-color;
-                &:hover, &:focus, &:active,
-                &:active:hover, &:active:focus {
-                    font-size: 1.2em;
-                    font-weight: bold;
-                    color: @btn-color;
-                    background-color: @btn-bg-color;
-                }
-            }
+// Input button
+.input-group-btn {
+    & a {
+        color: @btn-color !important;
+        &:hover, &:focus, &:active {
+            font-size: @font-size-base;
+            border: 1px solid @btn-color !important;
         }
+    }
 }
 
 // Panels
 .panel {
-    background-color: @main-color;
+    background-color: @color-gray-opacity;
 }
 
 .panel-info {
     border-color: @btn-color;
     & .panel-heading {
         color: @btn-color;
-        background-color: @main-color;
+        background-color: @color-gray-opacity;
         border-color: @btn-color;
     }
 }
 
 // Alerts
 .alert-danger {
-    color: @main-color;
+    color: @color-danger;
+    background-color: @color-gray-opacity;
+    & h4 {
+        font-weight: @font-weight-bold;
+    }
 }
 
 // Labels
 .label {
     padding: .3em .6em .3em;
 }
-.label-info {
+.label-info, .label-primary {
     background-color: @btn-bg-color;
+//     &:hover, &:focus, &:active {
+//         background-color: @btn-bg-hover-color;
+//     }
 }
 
 // navs
@@ -108,37 +103,39 @@ body .text-primary {
     background-color: @btn-bg-color;
     padding: 6px 15px;
     &:hover, &:focus, &:active {
-        font-size: 1.2em;
+        font-size: @font-size-medium;
         border: 1px solid @btn-color;
-        background-color: @main-color;
+        background-color: @btn-bg-hover-color;
     }
 }
 
 .nav-pills > .active > a > .badge {
     color: @btn-color;
-    font-weight: bold;
+    font-weight: @font-weight-bold;
     border-color: @btn-color;
-    background-color: @main-color;
+    background-color: @color-main;
     margin-top: 2px;
 }
 
-// web editor
-.o_switch > input + span {
-    background-color: @main-color !important;
+/* Jumbotron */
+.jumbotron_home {
+    background-color: unset;
+    & h1 {
+        font-size: 120px;
+        line-height: 0.5em;
+    }
+    & h2 {
+        font-size: 90px;
+        line-height: 0.5em;
+    }
+    & h5 {
+        margin-top: 40px;
+         & span {
+            font-weight: @font-weight-bold;
+            border: 2px solid white;
+            padding: 10px 20px;
+         }
+    }
 }
-.o_switch > input + span:after {
-    background-color: red !important;
-}
-.o_switch > input:checked + span {
-    background-color: @main-color !important;
-}
-.o_switch > input:checked + span:after {
-    background-color: green !important;
-}
-
-// SEO Modal
- body .modal.o_website_modal h3 {
-    font-size: 1.17em;
- }
 
 

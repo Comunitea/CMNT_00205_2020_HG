@@ -2,11 +2,16 @@
 <odoo>
 
     <template id="auth_signup.login" inherit_id="web.login" name="Sign up - Reset Password Handy Gym">
+        <!-- Center login button -->
+        <xpath expr="//div[hasclass('oe_login_buttons')]" position="attributes">
+            <attribute name="class" separator=" " add="text-center"/>
+        </xpath>
+        <!-- Center login button -->
         <xpath expr="//button[@type='submit']" position="after">
             <div class="row">
-                <div class="col-12 mt8 ml8 text-center">
-                    <a t-if="signup_enabled" t-attf-href="/web/signup?{{ keep_query() }}" class="btn btn-link">Sign up</a>
-                    <a t-if="reset_password_enabled" t-attf-href="/web/reset_password?{{ keep_query() }}" class="btn btn-link">Reset Password</a>
+                <div class="col-12 mt16 text-center">
+                    <a t-if="signup_enabled" t-attf-href="/web/signup?{{ keep_query() }}" class="btn btn-primary">Sign up</a>
+                    <a t-if="reset_password_enabled" t-attf-href="/web/reset_password?{{ keep_query() }}" class="btn btn-primary">Reset Password</a>
                 </div>
             </div>
         </xpath>

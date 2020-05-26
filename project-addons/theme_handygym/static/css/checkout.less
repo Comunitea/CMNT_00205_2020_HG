@@ -1,36 +1,64 @@
-// Address panels
-.border_primary {
-    border: 1px solid @white-color;
-}
-
-// Edit address panels
-.btn-link {
-    color: @white-color;
-    &:hover, &:focus, &:active {
-        font-size: 1.2em;
-        font-weight: bold;
-        color: @white-color;
-    }
-}
-
-// Review Order -> Change
 .oe_website_sale_osc {
+    // Address panels
+    & .border_primary {
+        border: 1px solid @color-white;
+    }
+
+    // Edit address panels
+    & .btn-link {
+        color: @color-white;
+        &:hover, &:focus, &:active {
+            font-size: 1.2em;
+            font-weight: @font-weight-bold;
+            color: @color-white;
+        }
+    }
+
+    // Review Order -> Change
     & small, thanks_msg {
         & a {
             color: @btn-bg-color;
             &:hover, &:focus, &:active {
-                font-size: 1.2em;
-                font-weight: bold;
-                color: @white-color;
+                font-size: @font-size-xx-large !important;
+                color: @color-white !important;
             }
+        }
+    }
+
+    // Review Order Table
+    & table#cart_products {
+        background-color: unset;
+        & tr {
+            background-color: unset;
+            & td {
+                padding: 8px;
+            }
+        }
+    }
+
+    // Pay Button message
+    & .oe_sale_acquirer_button {
+        .pre_msg {
+            margin-top: 8px;
+            margin-bottom: 48px;
         }
     }
 }
 
-// Review Order Table
+// Thank you for your order
 .oe_website_sale {
-    table {
-        background-color: @main-color;
+    // Headers
+    & h2, h3:not(.page-header) {
+        color: @color-white;
+        font-weight: @font-weight-bold;
+    }
+    // Order table
+    & table {
+        background-color: @color-gray-opacity;
+    }
+    // Payment panel info
+    & .panel-info {
+        margin-bottom: 48px;
     }
 }
 

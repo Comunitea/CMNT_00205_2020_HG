@@ -1,20 +1,21 @@
 // Cart table
-table.js_cart_lines, table#cart_products {
+table.table-striped.js_cart_lines {
+    background-color: unset;
     border-spacing: 0;
     & a:not(.btn) {
+        border: 1px solid #424242;
         &:hover, &:focus, &:active {
-            border: 1px solid @white-color;
+            border: 1px solid @color-white;
         }
     }
     & a.js_delete_product:hover {
         border: none;
     }
-}
-
-// Coupon Popover
-.discount-line {
-    & span {
-        float: left;
+    & tr {
+        background-color: unset;
+        & td {
+            padding: 8px;
+        }
     }
 }
 
@@ -24,3 +25,22 @@ table.js_cart_lines, table#cart_products {
         font-size: 18px;
     }
 }
+
+/****** Start Cart Popover ******/
+//
+.popover-title {
+    color: @btn-color !important;
+    background-color: @color-gray-opacity;
+    border-bottom: @color-gray-opacity;
+}
+// Product line
+.cart_line {
+    padding-bottom: 9px;
+}
+// Coupon
+.discount-line {
+    & span {
+        float: left;
+    }
+}
+/****** End Cart Popover ******/

@@ -1,20 +1,19 @@
 footer {
-    background-color: @main-color;
+    background-color: @color-bg-footer;
     // links
-    & a {
-        color: @secondary-color;
-        &:hover, &:focus, &:active {
-            font-size: 1.2em;
-            font-weight: bold;
-            color: @secondary-color;
+    & a:not(.a-submit) {
+        color: @color-link-footer;
+        &:not(.a-submit):hover, &:not(.a-submit):focus, &:not(.a-submit):active, {
+            font-size: @font-size-medium;
+            font-weight: @font-weight-bold;
+            color: @color-hover-link-footer;
             text-decoration: none;
         }
     }
     // Block content
     & #footer {
-        border-top: 1px solid @secondary-color;
-        border-bottom: 1px solid @secondary-color;
-        padding-bottom: 15px;
+        border-bottom: @border-footer;
+        padding-bottom: @padding-bottom-footer;
     }
     // Contact
     & ul.list-unstyled {

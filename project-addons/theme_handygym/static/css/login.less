@@ -1,21 +1,35 @@
-// Database selector
+// Login, signup and reset pwd
 .oe_website_login_container {
-    & .field-db {
-        & input.form-control[readonly] {
-            border: 1px solid @btn-readonly-color;
-            color: @main-color;
-        }
-        & .btn-default:hover, .btn-default:focus,
-        a:hover, a:focus, a:active {
-            padding: 18px 40px;
+    // Database selector
+    & .input-group-btn {
+        & a {
+            &:hover, &:focus, &:active {
+                font-size: @font-size-base;
+            }
         }
     }
+    // Login button
+    & a:not(.a-submit) {
+        color: @color-danger;
+        &:hover, &:focus, &:active {
+            color: @color-danger;
+        }
+    }
+    // signup and reset pwd links
     & .oe_login_buttons {
-        a:hover, a:focus, a:active,
-        a:active:hover, a:active:focus {
-            padding: 0;
-            font-size: 1.2em;
+        & a:not(.a-submit) {
+            margin-left: 8px;
+            border-radius: 4px;
+            border: 1px solid @btn-bg-color;
+            color: @btn-color;
+            background-color: @btn-bg-color;
+        }
+        & a:hover, & a:focus, & a:active {
             text-decoration: none;
+            border: 1px solid @btn-color;
+            background-color: @btn-bg-hover-color;
+            font-size: @font-size-base;
+            font-weight: @font-weight-bold;
         }
     }
 }

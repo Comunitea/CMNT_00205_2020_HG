@@ -1,12 +1,47 @@
+// My Account page
+.navbar-default {
+    background-color: @color-gray-opacity;
+    // My Account link
+    & a.navbar-brand {
+        color: @btn-bg-color;
+        &:hover, &:focus, &:active {
+            font-size: @font-size-large;
+            font-weight: @font-weight-bold;
+            color: @btn-bg-color;
+        }
+    }
+    // Documents links
+    & .o_portal_submenu {
+        & a {
+            color: @btn-color !important;
+            &:hover, &:focus, &:active {
+                font-size: @font-size-medium !important;
+                color: @btn-bg-color !important;
+            }
+        }
+    }
+}
+
+// Documents header links
 h3 {
     // Change your details
-    .btn-xs {
+    & .btn-xs {
         &:hover, &:focus, &:active {
-            font-size: 0.2em !important;
+            font-size: 1.2rem !important;
         }
     }
     // Your Documents links
+    font-size: @font-size-h3;
     & a:hover, a:focus, a:active {
-        font-size: 1.1em !important;
+        font-size: @font-size-h3 !important;
+        color: @btn-bg-color !important;
+    }
+}
+
+// Documents Table
+.o_my_status_table {
+    background-color: @color-gray-opacity;
+    & thead > tr.active > th {
+        background-color: @color-gray-opacity;
     }
 }

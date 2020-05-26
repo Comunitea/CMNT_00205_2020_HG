@@ -1,0 +1,19 @@
+body {
+    // Colors
+    color: @color-white;
+    background-image: @bg-image-body;
+    background-position: @bg-image-position;
+    background-repeat: @bg-image-bg-repeat;
+    background-size: @bg-image-bg-size;
+    & h1, h2, h3:not(.page-header) {
+        color: @color-danger;
+        font-weight: @font-weight-bold;
+    }
+    // SEO Modal
+    & .modal.o_website_modal h3 {
+        font-size: 1.17em;
+    }
+    & .page-header {
+        border-bottom: 1px solid @color-white;
+    }
+}

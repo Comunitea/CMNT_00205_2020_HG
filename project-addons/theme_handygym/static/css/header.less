@@ -1,8 +1,8 @@
 header {
     // Logo
     & a.navbar-brand img {
-        max-height: 40px;
-        margin-top: 4px;
+        max-height: 50px;
+        margin: 0px 0px;
     }
     // Menus
     & .nav {
@@ -13,19 +13,43 @@ header {
             }
         }
     }
-    .navbar-default{
-        background-color: @main-color;
-        border-color: @secondary-color;
-        & .navbar-nav > li.active{
-            font-weight: bold;
+    .navbar-default {
+        background-color: @color-bg-header;
+        border-bottom: @border-header;
+        padding: @padding-header;
+        & .navbar-nav > li.active {
+            font-weight: @font-weight-bold;
         }
         & .navbar-nav > li > a {
-            color: @secondary-color;
+            color: @color-text-header;
             &:hover, &:focus, &:active {
-                font-size: 1.2em;
-                font-weight: bold;
+                font-size: @font-size-medium;
+                font-weight: @font-weight-bold;
+                color: @color-hover-header;
+            }
+        }
+    }
+    // Dropdown
+    & .dropdown-menu {
+        border-color: @color-light-gray;
+//         background-color: @color-gray;
+        background-image: @bg-image-body;
+        background-position: @bg-image-position;
+        background-repeat: @bg-image-bg-repeat;
+        background-size: @bg-image-bg-size;
+        li {
+            a {
                 color: @btn-color;
-                background-color: @main-color !important;
+                &:hover, &:focus, &:active {
+                    font-size: @font-size-medium;
+                    font-weight: @font-weight-bold;
+                    color: @btn-bg-color !important;
+//                     background-color: @color-gray;
+                    background-image: @bg-image-body;
+                    background-position: @bg-image-position;
+                    background-repeat: @bg-image-bg-repeat;
+                    background-size: @bg-image-bg-size;
+                }
             }
         }
     }
@@ -78,12 +102,4 @@ body {
 //             top: 56px;
 //         }
 //     }
-}
-
-// Cookies message
-#website_cookie_notice {
-    & div.row{
-        padding-top: 8px;
-        padding-bottom: 8px;
-    }
 }
