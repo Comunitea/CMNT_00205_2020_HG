@@ -1,29 +1,58 @@
-// Margin content
 #product_detail {
+    // Margin content
     margin-top: 32px !important;
-}
-
-// Product detail image
-#o-carousel-product .carousel-inner div.item {
-    padding: 32px;
-}
-// If publish button for web editors
-.btn-group.js_publish_management.css_published {
-    padding-top: 8px;
-}
-
-// Add Qty
-.css_quantity {
-    & a {
-        border: 1px solid @btn-bg-color;
+    // Product detail image
+    #o-carousel-product .carousel-inner div.item {
+        padding: 32px;
+    }
+    // If publish button for web editors
+    .btn-group.js_publish_management.css_published {
+        padding-top: 8px;
+    }
+    // Product name
+    & #product_details {
+        h1 {
+            color: @btn-color;
+        }
+    }
+    // Short description
+    & p.text-muted {
         color: @btn-color;
-        background-color: @btn-bg-color;
     }
-    & a:hover, a:focus, &a:active {
-        font-size: 1.2em;
-        font-weight: @font-weight-bold;
-        background-color: @color-main;
-        border: 1px solid @color-white;
+    // Separator
+    & hr {
+        border-top: 1px solid @btn-color;
     }
-
+    // css_quantity
+    & .input-group {
+        & a {
+            color: @btn-color;
+            border: 1px solid #424242;
+            &:hover, &:focus, &:active {
+                font-size: @font-size-base;
+                border: 1px solid @btn-color !important;
+            }
+        }
+    }
+    // Add to wishlist
+    & button.btn-default {
+        color: @btn-color;
+        background-color: @btn-bg-hover-color;
+        border: 1px solid @btn-color;
+        // On wishlist
+        & .fa-heart {
+            color: @btn-bg-color;
+        }
+        // Not in wishlist
+        & .fa-heart-o {
+            color: @btn-color;
+        }
+        // Ready to add
+        &:hover, &:focus, &:active {
+            & div.fa {
+                font-size: @font-size-xx-large;
+                color: @btn-bg-color;
+            }
+        }
+    }
 }
