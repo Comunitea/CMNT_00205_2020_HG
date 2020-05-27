@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
-    <data>
+    <data noupdate="1">
         <!-- Set Default Website to Handy Gym -->
         <record id="website.default_website" model="website">
             <field name="name">Handy Gym</field>
@@ -8,9 +8,11 @@
             <field name="canonical_domain">http://handygym</field>
             <field name="favicon" type="base64" file="theme_handygym/static/img/favicon_black.png"/>
             <field name="logo" type="base64" file="theme_handygym/static/img/logo_handygym_white_300x100.png"/>
-            <field name="social_youtube">https://www.youtube.com</field>
+            <field name="social_twitter">https://www.twitter.com</field>
             <field name="social_facebook">https://www.facebook.com</field>
+            <field name="social_github">https://www.github.com</field>
             <field name="social_linkedin">https://www.linkedin.com</field>
+            <field name="social_youtube">https://www.youtube.com</field>
             <field name="social_instagram">https://www.instagram.com</field>
             <field name="base_url">http://handygym</field>
             <field name="auth_signup_uninvited">False</field>
