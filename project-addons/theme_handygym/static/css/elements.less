@@ -120,21 +120,38 @@ a:not(.a-submit) .navbar-default {
 /* Jumbotron */
 .jumbotron_home {
     background-color: unset;
-    & h1 {
-        font-size: 120px;
-        line-height: 0.5em;
-    }
-    & h2 {
-        font-size: 90px;
-        line-height: 0.5em;
-    }
+    background-position: 15% 48%;
     & h5 {
         margin-top: 40px;
          & span {
             font-weight: @font-weight-bold;
-            border: 2px solid white;
-            padding: 10px 20px;
          }
+    }
+}
+@media screen and (min-width: 480px) {
+    .jumbotron_home {
+        background-position: 10% 48%;
+        & h5 {
+            margin-top: 40px;
+             & span {
+                border: 2px solid white;
+                padding: 10px 20px;
+             }
+        }
+    }
+}
+@media screen and (min-width: 768px) {
+    .jumbotron_home {
+        background-position: 0% 48%;
+        & h1 {
+            font-size: 120px;
+            line-height: 0.5em;
+        }
+        & h2 {
+            font-size: 90px;
+            line-height: 0.5em;
+        }
+
     }
 }
 
