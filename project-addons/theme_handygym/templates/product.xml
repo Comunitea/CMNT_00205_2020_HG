@@ -43,6 +43,12 @@
                 <div class="mt16">
                     <div itemprop="description" t-field="product.description" class="oe_structure" id="product_full_description" />
                 </div>
+            </div>
+        </xpath>
+
+        <xpath expr="//div[@id='product_full_description']" position="after">
+            <div class="container mt32">
+                <h3 t-if="product.description">Opiniones</h3>
                 <div class="mt32">
                     <div class="revi_widget_product_48"/>
                     <script type="text/javascript">
@@ -68,6 +74,10 @@
     </template>
 
     <template id="website_sale_recommended_products" inherit_id="website_sale.recommended_products" name="Alternative Products Handy Gym">
+        <!-- Add margin bottom for footer -->
+        <xpath expr="//div[hasclass('container')]" position="attributes">
+            <attribute name="class" add="mb48" separator=" "/>
+        </xpath>
         <!-- Insert left margin to align image -->
         <xpath expr="//div[hasclass('container')]//div[1]" position="attributes">
             <attribute name="class" add="ml8" separator=" "/>
