@@ -27,12 +27,12 @@
             </div>
         </xpath>
         <!-- Delete breadcrumbs -->
-        <xpath expr="//div[@class='col-sm-4']" position="attributes">
+        <xpath expr="//div[hasclass('col-sm-4')]" position="attributes">
             <attribute name="t-if">True == False</attribute>
         </xpath>
 
         <!-- Delete search box -->
-        <xpath expr="//div[@class='col-sm-3 mb8']" position="attributes">
+        <xpath expr="//div[hasclass('col-sm-3 mb8')]" position="attributes">
             <attribute name="t-if">True == False</attribute>
         </xpath>
     </template>

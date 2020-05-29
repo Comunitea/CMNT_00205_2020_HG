@@ -3,7 +3,7 @@
 
     <template id="website_layout_footer_copyright" inherit_id="website.layout_footer_copyright" name="Footer Copyright Handy Gym">
         <!-- Set more margin bottom -->
-        <xpath expr="//div[@class='container mt16 mb8']" position="attributes">
+        <xpath expr="//div[hasclass('container', 'mt16', 'mb8')]" position="attributes">
             <attribute name="class">container mt16 mb16</attribute>
         </xpath>
     </template>
@@ -18,7 +18,7 @@
 
     <template id="website_footer_default" inherit_id="website.footer_default" name="Automatic Footer Handy Gym">
         <!-- Custom Footer on three columns part -->
-        <xpath expr="//div[@id='footer']/div[@class='row']" position="replace">
+        <xpath expr="//div[@id='footer']/div[hasclass('row')]" position="replace">
             <div class="row">
                 <div class="col-md-5" id="info">
                     <h4><strong>Contacto</strong></h4>

@@ -3,7 +3,7 @@
 
     <template id="website_crm_contactus_form" inherit_id="website_crm.contactus_form" name="Contact Form Handy Gym">
         <!-- Set phone as required -->
-        <xpath expr="//div[@class='form-group form-field']" position="attributes">
+        <xpath expr="//div[hasclass('form-group', 'form-field')]" position="attributes">
             <attribute name="class">form-group form-field o_website_form_required_custom</attribute>
         </xpath>
         <xpath expr="//input[@name='phone']" position="attributes">
