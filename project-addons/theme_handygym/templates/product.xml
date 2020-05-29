@@ -2,6 +2,23 @@
 <odoo>
 
     <template id="website_sale_product" inherit_id="website_sale.product" name="Product Handy Gym">
+        <!-- Insert revi starts on product image -->
+        <xpath expr="//div[@id='o-carousel-product']//div[hasclass('carousel-outer')]" position="before">
+            <div class="text-center">
+                <t t-set="rating" t-value="product.revi_product_rating()" />
+                <div t-if="rating and rating['avg'] &gt; 0" class="wp_stars_product_page">
+                    <t t-set="rating_stat" t-value="rating_product" />
+                    <t t-call="rating.rating_star_card">
+                        <t t-set="rating_default_value" t-value="rating['avg']" />
+                        <t t-set="rating_disabled" t-value="True" />
+                    </t>
+                    <div class="stars_comment" t-if="rating['num']">
+                        <strong><t t-esc="rating['avg']"/>/5</strong> (<span><t t-esc="rating['num']"/> <t t-esc="'opiniones' if rating['plural'] else 'opinión'"/></span>)
+                    </div>
+                </div>
+            </div>
+        </xpath>
+
         <!-- Add Short Description -->
          <xpath expr="//form" position="after">
             <div t-if="product.description_short">
@@ -10,30 +27,61 @@
                 <hr t-if="not product.description_sale"/>
             </div>
         </xpath>
+
         <!-- Hide guarantee text -->
         <xpath expr="//div[@id='product_details']//hr[last()]" position="attributes">
-            <attribute name="t-if">True == False</attribute>
+            <attribute name="class" add="hidden" separator=" "/>
         </xpath>
         <xpath expr="//div[@id='product_details']/p[last()]" position="attributes">
-            <attribute name="t-if">True == False</attribute>
+            <attribute name="class" add="hidden" separator=" "/>
         </xpath>
-        <!-- Add HTML Description -->
+
+        <!-- Add HTML Description and revi product opinions -->
         <xpath expr="//div[@id='product_full_description']" position="replace">
             <div class="container mt32">
-                    <h3 t-if="product.description">Especifications</h3>
+                <h3 t-if="product.description">Especificaciones</h3>
                 <div class="mt16">
                     <div itemprop="description" t-field="product.description" class="oe_structure" id="product_full_description" />
                 </div>
+                <div class="mt32">
+                    <div class="revi_widget_product_48"/>
+                    <script type="text/javascript">
+                        var s = document.createElement("script");
+                        s.type = "text/javascript";s.setAttribute("async", "");
+                        s.setAttribute("defer", "");
+                        s.src = "https://revi.io/widgets/product/5ecf754a4dd6a/<t t-esc="product.id"/>/0/48/es";
+                        document.getElementsByTagName("body")[0].appendChild(s);
+                    </script>
+                </div>
             </div>
         </xpath>
+
         <!-- Delete breadcrumbs -->
         <xpath expr="//div[hasclass('col-sm-4')]" position="attributes">
-            <attribute name="t-if">True == False</attribute>
+            <attribute name="class" add="hidden" separator=" "/>
         </xpath>
 
         <!-- Delete search box -->
-        <xpath expr="//div[hasclass('col-sm-3 mb8')]" position="attributes">
-            <attribute name="t-if">True == False</attribute>
+        <xpath expr="//div[hasclass('col-sm-3', 'mb8')]" position="attributes">
+            <attribute name="class" add="hidden" separator=" "/>
+        </xpath>
+    </template>
+
+    <template id="website_sale_recommended_products" inherit_id="website_sale.recommended_products" name="Alternative Products Handy Gym">
+        <!-- Insert left margin to align image -->
+        <xpath expr="//div[hasclass('container')]//div[1]" position="attributes">
+            <attribute name="class" add="ml8" separator=" "/>
+        </xpath>
+        <!-- Change name size for better performance -->
+        <xpath expr="//div[hasclass('container')]//div[1]//h5" position="attributes">
+            <attribute name="class" add="hidden" separator=" "/>
+        </xpath>
+        <xpath expr="//div[hasclass('container')]//div[1]//h5" position="after">
+            <p class="mt8">
+                <a t-attf-href="/shop/product/#{ slug(alt_product) }" style="display: block">
+                    <span t-att-title="alt_product.name" t-field="alt_product.name" style="display: block;" />
+                </a>
+            </p>
         </xpath>
     </template>
 
