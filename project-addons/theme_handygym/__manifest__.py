@@ -16,6 +16,7 @@
     'data': [
         'data/website_data.xml',
         'data/menu_data.xml',
+        'data/page_data.xml',
         'templates/assets.xml',
         'templates/checkout.xml',
         'templates/contact.xml',

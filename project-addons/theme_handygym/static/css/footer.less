@@ -14,20 +14,46 @@ footer {
     & #footer {
         border-bottom: @border-footer;
         padding-bottom: @padding-bottom-footer;
-    }
-    // Contact
-    & ul.list-unstyled {
-        & li {
-            margin-bottom: 3px;
+        // Section Titles
+        & h4 {
+            color: @color-hover-link-footer;
         }
-        & .fa-phone {
-            padding: 0 2px 0 1px;
+        // Address
+        & ul.list-unstyled {
+            & li {
+                margin-bottom: 3px;
+            }
+            & .fa-phone {
+                padding: 0 2px 0 1px;
+            }
+            & .fa-envelope {
+                padding: 0;
+            }
+            & .fa-map-marker {
+                padding: 0 3px;
+            }
         }
-        & .fa-envelope {
-            padding: 0;
-        }
-        & .fa-map-marker {
-            padding: 0 2px 0 3px;
+        // Social links
+        & h4 {
+            & a {
+                color: @color-fa-sharing-links;
+                font-size: @font-size-fa-sharing-links;
+                & .fa-facebook-square:hover {
+                    color: #3b5998;
+                }
+                & .fa-twitter-square:hover {
+                    color: #4099FF;
+                }
+                & .fa-linkedin-square:hover {
+                    color: #0E76A8;
+                }
+                & .fa-google-plus-square:hover, & .fa-youtube-play:hover, & .fa-youtube-square:hover {
+                    color: #DD4B39;
+                }
+                & .fa-github:hover {
+                    color: #24292E;
+                }
+            }
         }
     }
 }

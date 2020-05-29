@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data noupdate="1">
+
+        <template id="website.opiniones" page="True">
+            <t t-call="website.layout">
+                <t t-set="additional_title">Opiniones</t>
+                <div class="oe_structure mt32 mb48">
+                    <section data-snippet-id="title">
+                        <h1 class="text-center">Opiniones</h1>
+                    </section>
+                    <div class="oe_structure">
+                        <section class="s_text_block">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12 mb16 mt16 text-center">
+                                        <p>
+                                            Aquí podrás encontrar todas las opiniones de las personas que han comprado en <strong>Handy Gym</strong>.
+                                        </p>
+                                        <p>
+                                            Para ello en <strong>Handy Gym</strong> integramos el servicio de opiniones de Revi.
+                                        </p>
+                                    </div>
+                                    <div class="col-md-12 mb16 text-center">
+                                        <div class="revi_widget_wide_86"/>
+                                        <script type="text/javascript">
+                                            var s = document.createElement("script");s.type = "text/javascript";
+                                                    s.setAttribute("async", "");s.setAttribute("defer", "");
+                                                    s.src = "https://revi.io/widgets/wide/5ecf754a4dd6a/86/es";
+                                                    document.getElementsByTagName("body")[0].appendChild(s);
+                                        </script>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                    <div class="oe_structure">
+                        <section class="s_text_block">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12 mb16 mt16">
+                                        <h2>¿Qué es Revi?</h2>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 mb16 mt16">
+                                        <p>
+                                            Revi es un servicio online para que los clientes puedan dar sus opiniones después de realizar una compra online en
+                                            cualquier tienda online que integre sus servicios.
+                                        </p>
+                                        <p>
+                                            Puedes encontrar toda la información que desees sobre este servicio en su propia página oficial pulsando este enlace:
+                                            <a href="https://revi.io/es" title="Revi Friendly Shopping">Revi Friendly Shopping</a>.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                    <div class="oe_structure">
+                        <section class="s_text_block">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12 mb16 mt16">
+                                        <h2>¿Por qué Revi?</h2>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 mb16 mt16">
+                                        <p>
+                                            En <strong>Handy Gym</strong> nos esforzamos para obtener una total satisfacción de nuestros clientes, así, integramos este servicio para todos vosotros.
+                                        </p>
+                                        <p>
+                                            En <strong>Handy Gym</strong> consideramos que las opiniones de los clientes son esenciales porque un cliente satisfecho es la mejor publicidad que podemos tener.
+                                        </p>
+                                        <p>
+                                            En <strong>Handy Gym</strong> creemos que la gente debe poder conocernos y valorarnos antes de realizar su compra.
+                                        </p>
+                                        <p>
+                                            ¿Cómo? A través de las opiniones de nuestros clientes.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                    <div class="oe_structure">
+                        <section class="s_text_block">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12 mb16 mt16">
+                                        <h2>Opiniones</h2>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 mb16 mt16">
+                                        <div class="revi_widget_general_50"/>
+                                        <script type="text/javascript">
+                                            var s = document.createElement("script");
+                                            s.type = "text/javascript";s.setAttribute("async", "");
+                                            s.setAttribute("defer", "");
+                                            s.src = "https://revi.io//widgets/general/5ecf754a4dd6a/50";
+                                            document.getElementsByTagName("body")[0].appendChild(s);
+                                        </script>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </t>
+        </template>
+
+        <record id="website.opiniones" model="ir.ui.view">
+            <field name="website_meta_title">Opiniones Revi</field>
+            <field name="website_meta_description">
+                Descubre todas las opiniones que nuestros clientes han dejado a través del servicio de opiniones online de Revi.
+            </field>
+            <field name="website_meta_keywords">
+                Opiniones, opinión, Revi, Handy Gym, Compra, Satisfacción
+            </field>
+        </record>
+
+        <template id="website.tecnologia-handy-gym" page="True">
+            <t t-set="additional_title">Tecnología Handy Gym</t>
+            <t t-call="website.layout">
+                <div id="wrap" class="oe_structure oe_empty">
+                    <section class="s_big_picture mt16">
+                        <div class="container">
+                            <h2 class="text-center">
+                                <b>
+                                    <u>HANDY GYM</u>
+                                </b>
+                            </h2>
+                            <div class="row">
+                                <div class="col-md-12 mt0">
+                                    <img class="img img-responsive" src="/theme_handygym/static/img/handy_gym_machine_parts.png" style="margin: 0 auto;" alt="Odoo CMS - a big picture" data-original-title="" title=""/>
+                                </div>
+                                <div class="col-md-offset-1 col-md-10 mb0 mt8" style="text-align: center; "><b>VISTAS GENERAL Y ACCESORIOS</b><b><br/></b>¡Con Handy Gym, puedes realizar un entrenamiento de cuerpo completo con la ayuda de cientos de ejercicios diferentes!<br/></div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="s_big_picture mt48">
+                        <div class="container">
+                            <h2 class="text-center">
+                                <b>
+                                    <u>¿QUE ES LA TECNOLOGÍA INERCIAL?</u>
+                                </b>
+                            </h2>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <img class="img img-responsive" src="/theme_handygym/static/img/handy_gym_muscle.png" style="margin: 0 auto;" alt="Odoo CMS - a big picture" data-original-title="" title=""/>
+                                </div>
+                                <div class="mb16 mt16 col-md-offset-1 col-md-10">
+                                    <p class="text-center">
+                                        <b>EL TRABAJO MUSCULAR</b>
+                                    </p>
+                                    <p class="text-center o_default_snippet_text">La tecnología inercial es un tipo de método de entrenamiento de fuerza que es independiente de la gravedad. Permite el entrenamiento de resistencia en cualquier lugar sin levantar ni siquiera un kilogramo de peso, al tiempo que ofrece resultados de entrenamiento más fuertes y seguros. Cabe destacar que dicha tecnología fue desarrollada por la NASA para el entrenamiento de sus astronautas en el espacio.</p>
+                                    <p class="text-center">Por lo general, los músculos se lesionan en los movimientos de desaceleración, aceleración y cambio rápido de dirección. Estas lesiones, a menudo son causadas por músculos de control que no son lo suficientemente fuertes. La resistencia excéntrica puede mejorar estos músculos, prevenir lesiones y ayudar a recuperarse más rápido. <a href="/page/website.contactus" data-original-title="" title="">&amp;nbsp;</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="s_big_picture">
+                        <div class="container">
+                            <h2 class="text-center">
+                                <b>
+                                    <u>¿COMO FUNCIONA?</u>
+                                </b>
+                            </h2>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <img class="img img-responsive" src="/theme_handygym/static/img/handy_gym_machine_work.png" style="margin: 0 auto;" alt="Odoo CMS - a big picture" data-original-title="" title=""/>
+                                </div>
+                                <div class="mb16 mt16 col-md-offset-1 col-md-10">
+                                    <p class="text-center">
+                                        <b>FUNCIONAMIENTO</b>
+                                    </p>
+                                    <p class="text-center">Handy Gym funciona a través de dos discos inerciales que son capaces de convertir su giro en resistencia.</p>
+                                    <p class="text-center">El secreto esta en el cono y el engranaje epicíclico, juntos multiplican 13,5 veces la velocidad del eje y hacen que la masa del disco se reduzca 182,25 veces y, en consecuencia, el peso de toda la máquina.</p>
+                                    <p class="text-center">En términos de entrenamiento y / o eficiencia de recuperación, la tecnología inercial es altamente eficiente ya que es capaz de ofrecer un entrenamiento concéntrico y excéntrico increíble</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="s_title">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12 mt16">
+                                    <h2 class="text-center" style="">
+                                        <b>
+                                            <u>DIFERENTES NIVELES DE FUERZA</u>
+                                        </b>
+                                    </h2>
+                                    <div style="text-align: center;">
+                                        <br/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="s_three_columns">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-4 mt32 mb0">
+                                    <img class="img img-responsive" src="/theme_handygym/static/img/yellow_disc.png" alt="Odoo - Sample 1 for three columns"/>
+                                    <h4 class="mt16" style="text-align: center; ">
+                                        <b>
+                                            <font style="color: rgb(255, 255, 0);">DISCO AMARILLO</font>
+                                        </b>
+                                    </h4>
+                                    <h4 class="mt16" style="text-align: center; ">
+                                        Fuerza Baja
+                                    </h4>
+                                    <h4 class="mt16" style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; color: rgb(51, 51, 51);"/>
+                                    <p style="font-size: 14px; text-align: center;">
+                                        <b>
+                                            <font style="color: rgb(255, 255, 0); font-size: 48px;">90</font>
+                                        </b>
+                                    </p>
+                                    <p style="font-size: 14px; text-align: center;">lb. / in2 Inercia por disco</p>
+                                </div>
+                                <div class="col-md-4 mt32 mb0">
+                                    <img class="img img-responsive" src="/theme_handygym/static/img/blue_disc.png" alt="Odoo - Sample 2 for three columns"/>
+                                    <h4 class="mt16" style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; color: rgb(51, 51, 51); text-align: center;">
+                                        <b>
+                                            <font class="text-primary" style="">DISCO AZUL</font>
+                                        </b>
+                                    </h4>
+                                    <h4 class="mt16" style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; color: rgb(51, 51, 51); text-align: center;">
+                                        <font class="text-white" style="">Fuerza MEDIA</font>
+                                    </h4>
+                                    <h4 class="mt16"/>
+                                    <p style="font-size: 14px; text-align: center;">
+                                        <b>
+                                            <font style="font-size: 48px;" class="text-primary">135</font>
+                                        </b>
+                                    </p>
+                                    <p style="font-size: 14px; text-align: center;">lb. / in2 Inercia por disco<br/></p>
+                                </div>
+                                <div class="col-md-4 mt32 mb0">
+                                    <img class="img img-responsive" src="/theme_handygym/static/img/red_disc.png" alt="Odoo - Sample 3 for three columns" data-original-title="" title=""/>
+                                    <h4 class="mt16" style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; color: rgb(51, 51, 51); text-align: center;">
+                                        <b>
+                                            <font style="color: rgb(255, 0, 0);">DISCO ROJO</font>
+                                        </b>
+                                    </h4>
+                                    <h4 class="mt16" style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; color: rgb(51, 51, 51); text-align: center;">
+                                        <font class="text-white" style="">Fuerza ALTA</font>
+                                    </h4>
+                                    <h4 class="mt16"/>
+                                    <p style="font-size: 14px; text-align: center;">
+                                        <b>
+                                            <font style="color: rgb(255, 0, 0); font-size: 48px;">220</font>
+                                        </b>
+                                    </p>
+                                    <p style="font-size: 14px; text-align: center;">lb. / in2 Inercia por disco</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="s_text_block mt0" style="height: 136px; overflow: hidden;">
+                        <div class="container">
+                            <div class="row">
+                                <div class="mt16 col-md-offset-1 col-md-10 mb128">
+                                    <p style="text-align: center; ">Los discos son una parte esencial de Handy Gym porque sin ellos no habría resistencia. Los niveles de resistencia aplicados a la sesión de entrenamiento dependerán de la elección de los discos, y también de qué tan rápido y fuerte quiera realizarse un ejercicio.</p>
+                                    <p style="text-align: center; ">Todos estos discos son extremadamente ligeros ya que en este tipo de ejercicios no se trata de levantar peso.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </t>
+        </template>
+
+        <record id="website.tecnologia-handy-gym" model="ir.ui.view">
+            <field name="website_meta_title">Tecnología Handy Gym</field>
+            <field name="website_meta_description">
+                ¡Con Handy Gym, puedes realizar un entrenamiento de cuerpo completo con la ayuda de cientos de ejercicios diferentes!
+                La tecnología inercial es un tipo de método de entrenamiento de fuerza que es independiente de la gravedad.
+                Permite el entrenamiento de resistencia.
+            </field>
+            <field name="website_meta_keywords">
+                Handygym, Handy Gym, tecnología inercial, entrenamiento, resistencia, método de entrenamiento, entrenamiento de cuerpo completo
+            </field>
+        </record>
+
+        <template id="website.condiciones-generales-venta" page="True">
+            <t t-call="website.layout">
+                <t t-set="additional_title">Condiciones Generales Venta</t>
+                <div class="oe_structure mt32 mb48">
+                    <section data-snippet-id="title">
+                        <h1 class="text-center">Condiciones Generales Venta</h1>
+                    </section>
+
+                    <div class="oe_structure">
+                        <section class="s_text_block">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12 mb16 mt16">
+                                        <h2>Condiciones Legales</h2>
+                                        <p>Todas las compras que se realicen en <a href="https://www.handygym.es">www.handygym.es</a> (en adelante <strong>Handy Gym</strong>)
+                                            están sujetas a las condiciones generales de compra expuestas en el presente documento.
+                                        </p>
+                                        <p>
+                                            Las ventas generadas tanto online como en tienda física son ventas reguladas por la legislación española vigente en materia de la salud.
+                                        </p>
+                                        <strong><h4 t-ignore="true" t-field="res_company.name"/></strong>
+                                        <p>
+                                            <span t-ignore="true" t-field="res_company.street"/> <br/>
+                                        <span t-ignore="true" t-field="res_company.zip"/> - <span t-ignore="true" t-field="res_company.city"/><br/>
+                                        <span t-ignore="true" t-field="res_company.country_id"/>
+                                        </p>
+                                        <p><a t-att-href="'tel:%s' %res_company.phone" rel="nofollow, noindex"><i class="fa fa-phone" /> <span t-field="res_company.phone"/></a></p>
+                                        <p><a t-att-href="'mailto:%s' % res_company.email" target="_blank" rel="nofollow, noindex"><i class="fa fa-envelope"/> <span t-field="res_company.email"/></a></p>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12 mb16">
+                                        <h3>Listas de precio</h3>
+                                        <p>
+                                            Los precios de los productos que se muestran en nuestra tienda online incluyen los impuestos de la legislación española vigente.
+                                        </p>
+                                        <p>
+                                            En relación al Impuesto sobre el Valor Añadido (IVA), se aplicará el tipo impositivo para el territorio de la Unión Europea donde es de aplicación este impuesto.
+                                            Quedarán exentos de pagar este impuesto todas aquellas empresas pertenecientes a países de la Unión Europea con número de IVA intracomunitario, exceptuando España.
+                                            En la venta a cualquier otro país del mundo no se repercutirá IVA, no obstante los sistemas aduaneros de cada país aplicarán las cargas impositivas correspondientes.
+                                        </p>
+                                        <p>
+                                            Debido a su especial régimen fiscal, son considerados territorios extracomunitarios los ámbitos geográficos correspondientes a Canarias, Ceuta y Melilla.
+                                            Por lo tanto, las compras realizadas por residentes de estos territorios están exentas del pago del IVA
+                                            (los gastos del despacho de aduanas y los impuestos de importación no están incluidos en el precio del artículo ni en el del envío, y deberán ser pagados en destino por el cliente).
+                                        </p>
+                                        <p>
+                                            Los precios y la moneda única de pago es el euro.
+                                        </p>
+                                        <p>
+                                            Los precios expuestos en <strong>Handy Gym</strong> podrán ser revisados y modificados si las condiciones lo requieren en cualquier momento.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12 mb16">
+                                        <h3>Métodos de pago</h3>
+                                        <p>De forma a facilitar el pago de todos os productos que desea, nuestra tienda online dispone de los siguientes métodos:</p>
+                                        <ul class="ml16">
+                                            <li class="ml16 mt16 mb16">
+                                                <h4><strong>Transferencia Bancaria</strong></h4>
+                                                <p class="mb16">No conlleva ningún gasto adicional para el cliente.</p>
+                                                <ul class="list-unstyled">
+                                                    <li class="mb8"><strong>Entidad: </strong>Banco Santander</li>
+                                                    <li class="mb8"><strong>IBAN: </strong>ES68 0049 4510 3820 1001 5797</li>
+                                                    <li><strong>BIC: </strong>BSCHESMMXXX</li>
+                                                </ul>
+                                            </li>
+                                            <li class="ml16 mt16 mb16">
+                                                <h4><strong>Tarjeta de Crédito</strong></h4>
+                                                <p>No conlleva ningún gasto adicional para el cliente.</p>
+                                            </li>
+                                            <li class="ml16 mt16 mb16">
+                                                <h4><strong>Pagantis</strong></h4>
+                                                <p>
+                                                    Financia tus pedidos hasta en 12 meses con nuestro modulo de pago aplazado. Opción válidad para pedidos de mas de 350€.
+                                                    La aceptación de la financiación depende directamente de la financiera de Pagantis que realiza el método con un algoritmo matemático.
+                                                </p>
+                                                <p class="mt16">
+                                                    Puedes obtener toda la información sobre <strong>Pagantis</strong> pulsando en el siguiente <a href="https://www.pagantis.com/es/">enlace</a>.
+                                                </p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12 mb16">
+                                        <h3>Gastos de énvio</h3>
+                                        <p>Los gastos de envío son por zonas:</p>
+                                        <ul class="ml16">
+                                            <li>
+                                                <h4 class="mt16"><strong>España Peninsular:</strong></h4>
+                                                <ul class="list-unstyled">
+                                                    <li class="mt16">
+                                                        <u>Pedidos gratuitos</u> para para importes superiores a <strong>100€</strong>.
+                                                    </li>
+                                                    <li class="mt16">
+                                                        Tarifa estandar sin impuestos: <strong>5,75€.</strong>
+                                                    </li>
+                                                    <li class="mt16">
+                                                        Tarifa estandar con impuestos: <strong>6,96€.</strong>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <ul class="ml16">
+                                            <li>
+                                                <h4 class="mt16"><strong>España Insular:</strong></h4>
+                                                <ul class="list-unstyled">
+                                                    <li class="mt16">
+                                                        Tarifa estandar sin impuestos: <strong>15,75€.</strong>
+                                                    </li>
+                                                    <li class="mt16">
+                                                        Tarifa estandar con impuestos: <strong>19,05€.</strong>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <ul class="ml16">
+                                            <li>
+                                                <h4 class="mt16"><strong>Portugal:</strong></h4>
+                                                <ul class="list-unstyled">
+                                                    <li class="mt16">
+                                                        Tarifa estandar sin impuestos: <strong>20,75€.</strong>
+                                                    </li>
+                                                    <li class="mt16">
+                                                        Tarifa estandar con impuestos: <strong>25,11€.</strong>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12 mb16">
+                                        <h3>Plazos de entrega</h3>
+                                        <p>Garantizamos dar información rápida a nuestros clientes de los plazos de entrega estimados y si no cumplen con sus pretensiones procederíamos a la devolución del importe de su pedido.</p>
+                                        <p>El plazo de entrega estipulado para la península es de 3 a 5 días hábiles. Siendo lo más habitual la entrega en 24-48 horas.</p>
+                                        <p>Solo servimos para España y Portugal.</p>
+                                        <ul class="ml16">
+                                            <li>
+                                                <h4 class="mt16"><strong>España Peninsular:</strong></h4>
+                                                <ul class="list-unstyled">
+                                                    <li class="mt16">
+                                                        <strong>Handy Gym</strong> se exige la máxima celeridad en la entrega de sus pedidos.
+                                                        Nuestro compromiso con el cliente es máximo y por ello habitualmente las entregas se hacen en periodos no superiores a 48 horas, en muchos casos menores a 24 horas.
+                                                    </li>
+                                                    <li class="mt16">
+                                                        <strong>Handy Gym</strong> es distribuidor en sí mismo y además vende productos de más de 200 fabricantes nacionales e internacionales.
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <ul class="ml16">
+                                            <li>
+                                                <h4 class="mt16"><strong>España Insular:</strong></h4>
+                                                <ul class="list-unstyled">
+                                                    <li class="mt16">
+                                                        Los plazos de entrega podrían prolongarse dependiendo del distribuidor.
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <ul class="ml16">
+                                            <li>
+                                                <h4 class="mt16"><strong>Portugal:</strong></h4>
+                                                <ul class="list-unstyled">
+                                                    <li class="mt16">
+                                                        Los plazos de entrega podrían prolongarse dependiendo del distribuidor.
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12 mb16">
+                                        <h3>Devoluciones</h3>
+                                        <p>
+                                            Si cuando reciba su pedido no queda satisfecho, tiene un plazo de <strong>diez (10) días</strong>,
+                                            a contar desde la fecha de recepción para ejecutar el <strong>derecho de devolución</strong>.
+                                        </p>
+                                        <p>
+                                            En caso de devolución, los gastos de envío no serán reembolsados.
+                                            Asimismo, los gastos de recogida serán por cuenta del cliente (equivalen al importe del envío que corresponda al tipo de producto adquirido y al destino enviado).
+                                        </p>
+                                        <p>
+                                            Para realizar la devolución, el producto deberá estar en perfectas condiciones, en su embalaje original y con los manuales, accesorios o regalos promocionales incluidos en su caso.
+                                            Una vez recibida la mercancía en nuestros almacenes, y previa comprobación del estado de la misma, se procederá al reintegro de su importe.
+                                        </p>
+                                        <p>
+                                            En cualquier caso, se admitirá la devolución de los productos defectuosos y envíos erróneos,
+                                            siendo <strong>Handy Gym</strong> quien se hará cargo de los gastos de envío siempre que el cliente comunique esta circunstancia en el plazo de diez (10) días
+                                            contados desde la fecha de recepción del envío.
+                                        </p>
+                                        <p>
+                                            En ningún caso se podrá realizar la devolución si:
+                                        </p>
+                                        <ul class="ml16">
+                                            <li class="mt16">
+                                                Si el producto, una vez entregado sufre deterioro provocado por hechos externos, accidentes o incumplimiento de las instrucciones de uso.
+                                            </li>
+                                            <li class="mt16">
+                                                Si el producto resulta dañado por instalación o configuración incorrecta de los accesorios por parte del cliente.
+                                            </li>
+                                            <li class="mt16">
+                                                Si se produce una avería ocasionada por un componente no suministrado por <strong>Handy Gym</strong>.
+                                            </li>
+                                            <li class="mt16">
+                                                En el caso de que las condiciones generales del fabricante así lo indicasen.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12 mb16">
+                                        <h3>Garantía</h3>
+                                        <p>
+                                            Los clientes de <strong>Handy Gym</strong> se benefician de la garantía dada por los distintos fabricantes de cada uno de los artículos.
+                                        </p>
+                                        <p>
+                                            Los defectos o desperfectos debidos a una incorrecta utilización o manipulación del material o los desgastes producidos por un uso normal del mismo, no se incluyen en esta garantía.
+                                        </p>
+                                        <p>
+                                            Las mermas en la funcionalidad de los artículos, debidas a las limitaciones de concepción de los mismos, también están excluidas de la cobertura de esta garantía.
+                                        </p>
+                                        <p>
+                                            En caso de producto defectuoso, el vendedor deberá proceder, según corresponda, a la reparación, sustitución, rebaja del precio o resolución del contrato,
+                                            gestiones que serán gratuitas para el consumidor y usuario. El vendedor responde de las faltas de conformidad que se manifiesten en un plazo de dos años desde la entrega.
+                                            El consumidor y usuario deberá informar al vendedor de la falta de conformidad en el plazo de dos meses desde que tuvo conocimiento de ella.
+                                        </p>
+                                        <p>
+                                            Consulte el consejo especializado de nuestro Servicio de Atención al Cliente, el cual le facilitará el contacto de los diferentes servicios técnicos de nuestros proveedores,
+                                            así como la forma de proceder para recibir un aparato de sustitución de similares características en menos de 48 horas.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12 mb16">
+                                        <h3>Limitacion de responsabilidad</h3>
+                                        <p>
+                                            Es responsabilidad del cliente estar técnicamente capacitado para utilizar los materiales que <strong>Handy Gym</strong> distribuye.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12 mb16">
+                                        <h3>Protección de datos de caracter personal</h3>
+                                        <p>
+                                            En cumplimiento de lo establecido en la Ley Orgánica 15/1999, de 13 de diciembre, de Protección de Datos de Carácter Personal,
+                                            <strong>Handy Gym</strong> informa a sus clientes de que cuantos datos personales le faciliten serán incluidos en un fichero automatizado de datos de carácter personal,
+                                            creado y mantenido bajo la responsabilidad de <strong>Handy Gym</strong>.
+                                        </p>
+                                        <p>
+                                            La finalidad de dicho fichero es facilitar la tramitación de los pedidos y enviar ofertas comerciales en el futuro sobre productos y servicios que puedan resultar de interés a nuestros clientes.
+                                        </p>
+                                        <p>
+                                            <strong>Handy Gym</strong> garantiza la seguridad y confidencialidad de los datos facilitados.
+                                            De este modo, se compromete al cumplimiento de su obligación de secreto de los datos de carácter personal y de su deber de guardarlos y
+                                            adoptar todas las medidas necesarias para evitar su alteración, pérdida, tratamiento o uso no autorizado. Por lo tanto, toda la información
+                                            sobre nuestros clientes no será utilizada con propósitos comerciales ni será cedida a terceros.
+                                        </p>
+                                        <p>
+                                            Los clientes de <strong>Handy Gym</strong> podrán en todo momento ejercitar los derechos de acceso, rectificación, cancelación y oposición,
+                                            comunicándolo por escrito a nuestra dirección de correo electrónico
+                                            <a t-att-href="'mailto:%s' % res_company.email" target="_blank" rel="nofollow, noindex"><span t-field="res_company.email"/></a>
+                                            llamando al teléfono <a t-att-href="'tel:%s' %res_company.phone" rel="nofollow, noindex"><span t-field="res_company.phone"/></a>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12 mb16">
+                                        <h3>Legislación y jurisdicción</h3>
+                                        <p>
+                                            Las presentes condiciones generales se interpretarán conforme a la legislación vigente en España en la materia, que se aplicará subsidiariamente en todo lo que no se haya previsto en las mismas.
+                                            (Básicamente Ley 34/2002 de 11 de julio de servicios de la información y comercio electrónico).
+                                        </p>
+                                        <p>
+                                            Las partes se someten, a su elección, para la resolución de los conflictos y con renuncia a cualquier otro fuero, a los juzgados y tribunales del domicilio del usuario.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </t>
+        </template>
+
+        <record id="website.condiciones-generales-venta" model="ir.ui.view">
+            <field name="website_meta_title">Condiciones Generales Venta</field>
+            <field name="website_meta_description">
+                Términos y condiciones legales sobre las condiciones generales de venta en la web de Handy Gym https://www.handygym.es
+            </field>
+            <field name="website_meta_keywords">
+                Handygym, Handy Gym, Términos legales, Condiciones legales, Condicciones Venta, Devoluciones, Compra, información, Métodos de emvío, Método de Pago, Portes, Pago Seguro
+            </field>
+        </record>
+
+    </data>
+</odoo>
