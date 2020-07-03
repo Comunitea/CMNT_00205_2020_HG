@@ -19,6 +19,24 @@
             </div>
         </xpath>
 
+        <!-- Add Pagantis widget -->
+         <xpath expr="//div[@id='product_details']" position="inside">
+            <t t-set="pmt" t-value="request.env['payment.acquirer'].sudo().search([('website_published', '=', True), ('company_id', '=', product.company_id.id), ('provider', '=', 'pmt')])"/>
+             <!-- Pagantis widget -->
+             <div class="wp-widget-paga-mas-tarde mb16" t-if="pmt and product.website_price &gt; pmt.min_amount_required and not product.hide_website_price">
+                 <script type="text/javascript" src="https://cdn.pagamastarde.com/pmt-js-client-sdk/3/js/client-sdk.min.js"/>
+                 <div class="PmtSimulator"
+                      data-pmt-num-quota="12"
+                      data-pmt-style="blue"
+                      data-pmt-type="6"
+                      t-att-data-pmt-amount="product.website_price"/>
+                 <!-- Set Public Key and reload simulator -->
+                 <script>pmtClient.setPublicKey('<t t-esc="pmt.pmt_public_key"/>');pmtClient.simulator.init();</script>
+             </div>
+             <!-- END Pagantis widget -->
+             <hr t-if="pmt and product.website_price &gt; pmt.min_amount_required and not product.hide_website_price"/>
+         </xpath>
+
         <!-- Add Short Description -->
          <xpath expr="//form" position="after">
             <div t-if="product.description_short">
