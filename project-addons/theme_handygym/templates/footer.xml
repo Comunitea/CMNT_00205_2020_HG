@@ -25,7 +25,9 @@
                     <ul class="list-unstyled">
                         <li t-ignore="true">
                             <span t-field="res_company.street"/> <br/>
-                            <span t-field="res_company.zip"/> - <span t-field="res_company.city"/>, <br/>
+                            <span t-field="res_company.street2"/> <br/>
+                            <span t-field="res_company.zip"/> - <span t-field="res_company.city"/> <br/>
+                            <span t-field="res_company.state_id"/> <br/>
                             <span t-field="res_company.country_id"/> <br/>
                             <t t-if="res_company.google_map_link()">
                                 <span class="fa fa-map-marker"/> <a t-att-href="res_company.google_map_link()" target="_BLANK"> Google Maps</a>
