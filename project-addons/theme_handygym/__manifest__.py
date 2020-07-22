@@ -25,6 +25,7 @@
         'templates/login.xml',
         'templates/product.xml',
         'templates/shop.xml',
+        'views/product_view.xml',
         'views/res_config.xml',
     ],
     'images': [
