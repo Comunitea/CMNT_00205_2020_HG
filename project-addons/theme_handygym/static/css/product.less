@@ -3,7 +3,11 @@
     margin-top: 32px !important;
     // Product detail image
     #o-carousel-product .carousel-inner div.item {
-        padding: 32px;
+        padding: 20px 0px;
+        height: auto;
+        & img {
+            width: 82%;
+        }
     }
     // If publish button for web editors
     .btn-group.js_publish_management.css_published {
@@ -13,6 +17,7 @@
     & #product_details {
         h1 {
             color: @btn-color;
+            font-size: 30px;
         }
     }
     // Short description
@@ -55,5 +60,11 @@
                 color: @btn-bg-color;
             }
         }
+    }
+}
+
+@media (min-width: 1200px) {
+    .col-lg-offset-1 {
+        margin-left: 5px;
     }
 }
