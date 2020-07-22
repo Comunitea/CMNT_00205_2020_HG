@@ -65,7 +65,7 @@
         </xpath>
 
         <xpath expr="//div[@id='product_full_description']" position="after">
-            <div class="container mt32">
+            <div class="container">
                 <h3 t-if="product.description">Opiniones</h3>
                 <div class="mt32">
                     <div class="revi_widget_product_48"/>
