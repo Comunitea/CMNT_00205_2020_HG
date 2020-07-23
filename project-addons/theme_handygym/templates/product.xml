@@ -56,7 +56,7 @@
 
         <!-- Add HTML Description and revi product opinions -->
         <xpath expr="//div[@id='product_full_description']" position="replace">
-            <div class="container mt32">
+            <div class="container">
                 <h3 t-if="product.description">Especificaciones</h3>
                 <div class="mt16">
                     <div itemprop="description" t-field="product.description" class="oe_structure" id="product_full_description" />
@@ -65,7 +65,7 @@
         </xpath>
 
         <xpath expr="//div[@id='product_full_description']" position="after">
-            <div class="container">
+            <div class="container mt32">
                 <h3 t-if="product.description">Opiniones</h3>
                 <div class="mt32">
                     <div class="revi_widget_product_48"/>
@@ -104,12 +104,31 @@
         <xpath expr="//div[hasclass('container')]//div[1]//h5" position="attributes">
             <attribute name="class" add="hidden" separator=" "/>
         </xpath>
+        <!-- Use product slug if exist -->
         <xpath expr="//div[hasclass('container')]//div[1]//h5" position="after">
             <p class="mt8">
-                <a t-attf-href="/shop/product/#{ slug(alt_product) }" style="display: block">
+                <a t-attf-href="#{'/product/%s' % alt_product.slug if product.slug else keep('/shop/product/%s' % slug(alt_product))}" style="display: block">
                     <span t-att-title="alt_product.name" t-field="alt_product.name" style="display: block;" />
                 </a>
             </p>
+        </xpath>
+    </template>
+
+    <!-- Product item use slug if exist -->
+    <template id="website_sale_products_item" inherit_id="website_sale.products_item" name="Product Item Handy Gym">
+        <!-- Image URL and attributes -->
+        <xpath expr="//div[hasclass('oe_product_image')]/a/span" position="replace">
+            <span><img t-att-alt="product.name" t-att-title="product.name" itemprop="image"
+                       t-attf-src="/web/image/product.template/{{product.id}}/image/"
+                       t-options="{'widget': 'image', 'resize': None if product_image_big else '300x300', 'zoom': 'image'}"/></span>
+        </xpath>
+        <!-- Friendly URL for product (from image) -->
+        <xpath expr="//div[hasclass('oe_product_image')]/a" position="attributes">
+            <attribute name="t-att-href">'/product/{}'.format(product.slug) if product.slug else keep('/shop/product/%s' % slug(product))</attribute>
+        </xpath>
+        <!-- Friendly URL for product (from name) -->
+        <xpath expr="//a[@itemprop='name']" position="attributes">
+            <attribute name="t-att-href">'/product/{}'.format(product.slug) if product.slug else keep('/shop/product/%s' % slug(product))</attribute>
         </xpath>
     </template>
 
