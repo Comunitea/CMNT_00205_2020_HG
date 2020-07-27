@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <!-- Add Condiciones Generales Venta after copyright and company name -->
+    <template id="condiciones_generales_venta" inherit_id="website.layout_footer_copyright" name="Condiciones Generales Venta Link Handy Gym">
+        <xpath expr="//footer//div/span[@t-field='res_company.name']" position="after">
+            <span> - <a href="/page/condiciones-generales-venta" rel="nofollow, noindex" alt="Condiciones Generales Venta">Condiciones Generales Venta</a></span>
+        </xpath>
+    </template>
+
+    <!-- Add Condiciones Generales Venta on register -->
+    <template id="website_signup_legal_page_required_signup_view" inherit_id="website_signup_legal_page_required.signup_view" name="Force legal terms Handy Gym">
+        <xpath expr="//span[@id='legal_terms_msg']" position="replace">
+            <span id="legal_terms_msg">
+                Acepto el <a href="/legal/advice" rel="nofollow, noindex" alt="Aviso Legal">aviso legal</a>
+                , la <a href="/legal/privacy-policy" rel="nofollow, noindex" alt="Política de Privacidad">política de privacidad</a>
+                , los <a href="/legal/terms-of-use" rel="nofollow, noindex" alt="Términos de Uso">términos de uso</a>
+                y las <a href="/page/condiciones-generales-venta" rel="nofollow, noindex" alt="Condiciones Generales Venta">condiciones generales de venta</a>
+                de este sitio web.
+            </span>
+        </xpath>
+    </template>
+
+    <!-- Replace reusable legal template to add Condiciones Generales Venta -->
+    <template id="website_legal_page.acceptance_full" name="Acceptance Full Handy Gym">
+        Acepto el <a href="/legal/advice" rel="nofollow, noindex" alt="Aviso Legal">aviso legal</a>
+        , la <a href="/legal/privacy-policy" rel="nofollow, noindex" alt="Política de Privacidad">política de privacidad</a>
+        , los <a href="/legal/terms-of-use" rel="nofollow, noindex" alt="Términos de Uso">términos de uso</a>
+        y las <a href="/page/condiciones-generales-venta" rel="nofollow, noindex" alt="Condiciones Generales Venta">condiciones generales de venta</a>
+        de este sitio web.
+    </template>
+
+</odoo>

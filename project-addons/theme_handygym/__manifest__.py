@@ -10,8 +10,10 @@
         'web',
         'website',
         'website_crm',
+        'website_legal_page',
         'website_sale',
         'website_sale_wishlist',
+        'website_signup_legal_page_required',
     ],
     'data': [
         'data/website_data.xml',
@@ -22,6 +24,7 @@
         'templates/contact.xml',
         'templates/footer.xml',
         'templates/header.xml',
+        'templates/legal.xml',
         'templates/login.xml',
         'templates/product.xml',
         'templates/shop.xml',
