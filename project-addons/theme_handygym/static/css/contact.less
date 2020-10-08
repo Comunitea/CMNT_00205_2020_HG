@@ -34,12 +34,14 @@
 
 // Address
 address {
-    // Company name
-    & [itemprop="name"] {
-        line-height: 1.6;
-        color: @btn-bg-color;
-        font-size: @font-size-h3;
-        font-weight: @font-weight-bold;
+    & address {
+        // Company name
+        & [itemprop="name"] {
+            line-height: 1.6;
+            color: @btn-bg-color;
+            font-size: @font-size-h3;
+            font-weight: @font-weight-bold;
+        }
     }
     // Maps link
     & a:not(.a-submit) {
