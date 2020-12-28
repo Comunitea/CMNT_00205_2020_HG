@@ -3,7 +3,7 @@
 
     <template id="website_sale_product" inherit_id="website_sale.product" name="Product Handy Gym">
         <!-- Insert revi starts on product image -->
-        <xpath expr="//div[@id='o-carousel-product']//div[hasclass('carousel-outer')]" position="before">
+        <xpath expr="//div[@id='o-carousel-product']" position="before">
             <div class="text-center">
                 <t t-set="rating" t-value="product.revi_product_rating()" />
                 <div t-if="rating and rating['avg'] &gt; 0" class="wp_stars_product_page">
@@ -65,9 +65,9 @@
         </xpath>
 
         <xpath expr="//div[@id='product_full_description']" position="after">
-            <div class="container mt32">
+            <div class="container mt32 wp_revi_widget_product">
                 <h3 t-if="product.description">Opiniones</h3>
-                <div class="mt32">
+                <div class="mt32 mb48">
                     <div class="revi_widget_product_48"/>
                     <script type="text/javascript">
                         var s = document.createElement("script");

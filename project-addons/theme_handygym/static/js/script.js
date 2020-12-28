@@ -19,4 +19,10 @@ $(document).ready(function(){
             }
         }
     });
+
+    /* Scroll to revi widget on product rating stars click */
+    $('.wp_stars_product_page').on('click', function(){
+        var to_scroll = $('.wp_revi_widget_product').offset().top
+        $('html, body').animate({ scrollTop: to_scroll - 150}, 700);
+    });
 });
