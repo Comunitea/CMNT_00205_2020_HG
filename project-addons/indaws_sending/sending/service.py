@@ -11,7 +11,8 @@ _logger = logging.getLogger(__name__)
 
 class SendingService:
 
-    delivery_url = 'http://padua.sending.es/sending/ws_clientes?wsdl'
+    # delivery_url = 'http://padua.sending.es/sending/ws_clientes?wsdl'
+    delivery_url = 'https://wssending.alertran.net/sending/ws_clientes?wsdl'
 
     def __init__(self, username, password):
         self.username = username
@@ -20,9 +21,10 @@ class SendingService:
     def grabar_envio(self, fichero, center):
 
         session = Session()
-        session.auth = HTTPBasicAuth(self.username, self.password)
-        connect_client = Client(self.delivery_url,
-                                transport=Transport(session=session))
+        # session.auth = HTTPBasicAuth(self.username, self.password)
+        # connect_client = Client(self.delivery_url,
+        #                         transport=Transport(session=session))
+        connect_client = Client(self.delivery_url)
 
         passwd = md5.new()
         passwd.update(self.password)
@@ -39,9 +41,10 @@ class SendingService:
     def conseguir_pdf(self, expedicion, center):
 
         session = Session()
-        session.auth = HTTPBasicAuth(self.username, self.password)
-        connect_client = Client(self.delivery_url,
-                                transport=Transport(session=session))
+        # session.auth = HTTPBasicAuth(self.username, self.password)
+        # connect_client = Client(self.delivery_url,
+        #                         transport=Transport(session=session))
+        connect_client = Client(self.delivery_url)
         passwd = md5.new()
         passwd.update(self.password)
         result = connect_client.service.\
